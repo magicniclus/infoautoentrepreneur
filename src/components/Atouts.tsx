@@ -54,9 +54,9 @@ const Atouts = () => {
               </p>
               <a
                 href="#form"
-                className={`p-5 text-slate-700 bg-white w-full py-2 rounded-md mt-5 transition duration-150 ease-in-out cursor-pointer`}
+                className={`p-5 text-white bg-green-700 w-full py-2 rounded-md mt-5 transition duration-150 ease-in-out cursor-pointer`}
               >
-                Devenir Auto-Entrepreneur
+                DEVENIR AUTO-ENTREPRENEUR
               </a>
             </div>
           </div>
