@@ -101,7 +101,11 @@ const Hero = () => {
           right: 0;
           bottom: 0;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.4);
+          background: linear-gradient(
+            to right,
+            rgba(59, 70, 97, 0.53) 0.03%,
+            rgba(59, 70, 97, 0.2) 99.95%
+          );
           z-index: 0;
         }
         .content {
@@ -111,15 +115,20 @@ const Hero = () => {
       `}</style>
       <section
         id="form"
-        className="w-full bg-[url('/background/woman.jpg')] py-10 md:py-24 bg-no-repeat bg-cover bg-center relative background text-slate-700"
+        className="w-full bg-[url('/background/papier.png')] md:bg-[url('/background/men.jpeg')] py-10 md:py-32 bg-no-repeat bg-cover md:bg-center bg-top relative background text-slate-700"
       >
         <div className="px-6 lg:px-8 max-w-6xl mx-auto flex md:flex-row flex-col z-10 content">
-          <div className="md:w-1/2 w-full">
-            <h1 className=" text-white font-bold sm:text-6xl text-4xl">
+          <div className="md:w-1/2 w-full relative z-20">
+            <img
+              src="/logo.png"
+              alt="hero"
+              className="w-48 h-auto absolute -top-5 -left-5 z-10 opacity-60"
+            />
+            <h1 className="text-white font-bold sm:text-6xl text-4xl relative z-20">
               Créez votre <br /> auto-entreprise <br /> en quelques clics
             </h1>
-            <ul className=" text-white mt-8">
-              <li className="mt-3 flex items-center  text-normal">
+            <ul className="text-white mt-8 relative z-20">
+              <li className="mt-3 flex items-center text-normal">
                 <div className="flex justify-center items-center">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-white mr-3" />
                 </div>
@@ -134,7 +143,7 @@ const Hero = () => {
               <li className="mt-3 flex items-center text-normal">
                 <div className="flex justify-center items-center">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-white mr-3" />
-                </div>{" "}
+                </div>
                 Dossier traité sous 24h
               </li>
             </ul>
@@ -145,7 +154,7 @@ const Hero = () => {
               onSubmit={handleSubmit}
             >
               <h2 className="text-center font-semibold w-9/12 mx-auto">
-                Formulaire de démarche en ligne simplifié
+                FORMULAIRE DE DÉCLARATION EN LIGNE SIMPLIFIÉ
               </h2>
               <div className=" flex justify-between mt-5">
                 <div className="w-full md:w-[45%]">
@@ -218,7 +227,7 @@ const Hero = () => {
                   disabled ? "bg-cyan-900/70" : "bg-cyan-900"
                 }  text-white w-full py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 easeInOut`}
               >
-                Créer mon auto-entreprise
+                CRÉER MON AUTO-ENTREPRISE
               </button>
             </form>
           </div>
