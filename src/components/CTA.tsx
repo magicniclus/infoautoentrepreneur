@@ -17,7 +17,7 @@ const CTA: FC<CTAProps> = ({
     <div className="bg-white">
       <div className="mx-auto max-w-6xl sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden px-6 py-16 bg-[url('/background/papier.png')] bg-no-repeat bg-cover text-center shadow-2xl sm:rounded-3xl sm:px-16">
-          <div className="absolute inset-0 bg-cyan-700 opacity-70 z-0"></div>
+          <div className="absolute inset-0 bg-slate-500 opacity-50 z-0"></div>
           <h2 className="relative mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl z-10">
             {titre}
           </h2>
@@ -27,7 +27,7 @@ const CTA: FC<CTAProps> = ({
           <div className="relative mt-10 flex items-center justify-center gap-x-6 z-10">
             <a
               href={lienBouton}
-              className="rounded-md bg-slate-700 text-white px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md bg-green-700 text-white px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               {texteBouton}
             </a>
