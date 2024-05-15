@@ -5,7 +5,7 @@ const Notes = () => {
   return (
     <section className="w-full py-10 text-slate-700">
       <div className="px-4 max-w-6xl mx-auto w-full flex justify-center items-center flex-col">
-        <img src="/icons/badge.png" alt="badge de note" className="h-10 w-10" />
+        <img src="/icons/badge.png" alt="badge de note" className="h-14 w-14" />
         <h2 className="mt-2 text-center">
           Nos clients nous évaluent{" "}
           <span className="text-cyan-900 font-bold">4,8/5</span>{" "}
