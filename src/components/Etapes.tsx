@@ -41,12 +41,12 @@ const Etapes = ({ titre }: { titre?: string }) => {
               className="flex flex-col mx-auto max-w-xs gap-y-4"
             >
               {stat.id === 1 ? (
-                <dt className="p-3 bg-blue-700/10  rounded-full self-center">
-                  <CursorArrowRippleIcon className="h-12 w-12 text-blue-700" />
+                <dt className="p-3 bg-cyan-600/10  rounded-full self-center">
+                  <CursorArrowRippleIcon className="h-12 w-12 text-cyan-600" />
                 </dt>
               ) : stat.id === 2 ? (
-                <dt className="p-3 bg-cyan-900/10 rounded-full self-center">
-                  <DocumentMagnifyingGlassIcon className="h-12 w-12 text-cyan-900" />
+                <dt className="p-3 bg-green-700/10 rounded-full self-center">
+                  <DocumentMagnifyingGlassIcon className="h-12 w-12 text-green-700" />
                 </dt>
               ) : (
                 <dt className="p-3 bg-yellow-500/10 rounded-full self-center">
