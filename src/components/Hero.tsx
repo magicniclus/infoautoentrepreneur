@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
@@ -129,20 +130,20 @@ const Hero = () => {
             </h1>
             <ul className="text-white mt-8 relative z-20">
               <li className="mt-3 flex items-center text-normal">
-                <div className="flex justify-center items-center">
-                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-cyan-700 mr-3" />
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/50">
+                  <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Déclaration simplifiée au statut d&apos;auto-entrepreneur 2024
               </li>
               <li className="mt-3 flex items-center text-normal">
-                <div className="flex justify-center items-center">
-                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-cyan-700 mr-3" />
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/50">
+                  <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Déclaration simple et rapide
               </li>
               <li className="mt-3 flex items-center text-normal">
-                <div className="flex justify-center items-center">
-                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-cyan-700 mr-3" />
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/50">
+                  <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Dossier traité sous 24h
               </li>
@@ -224,10 +225,10 @@ const Hero = () => {
                 disabled={disabled}
                 type="submit"
                 className={`${
-                  disabled ? "bg-cyan-900/70" : "bg-cyan-900"
-                }  text-white w-full py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 easeInOut`}
+                  disabled ? "bg-green-700/70" : "bg-green-700"
+                }  text-white w-full py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 easeInOut`}
               >
-                CRÉER MON AUTO-ENTREPRISE
+                DÉMARREZ VOTRE ENTREPRISE
               </button>
             </form>
           </div>
