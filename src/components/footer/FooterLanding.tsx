@@ -4,7 +4,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 const FooterLanding = () => {
   return (
     <footer className="w-full py-5 text-slate-700 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between p-5 lg:p-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between p-5 lg:p-1">
         <div className="flex flex-col">
           <div className="flex lg:flex-1">
             <div className="-m-1.5 p-1.5">
@@ -29,10 +29,10 @@ const FooterLanding = () => {
           />
           <h2 className="mt-1 text-center">Nos client nous evaluents:</h2>
           <div className="flex mt-1">
-            <StarIcon className="h-5 w-5 text-yellow-400 mr-2" />
-            <StarIcon className="h-5 w-5 text-yellow-400 mr-2" />
-            <StarIcon className="h-5 w-5 text-yellow-400 mr-2" />
-            <StarIcon className="h-5 w-5 text-yellow-400 mr-2" />
+            <StarIcon className="h-5 w-5 text-yellow-400 mr-1" />
+            <StarIcon className="h-5 w-5 text-yellow-400 mr-1" />
+            <StarIcon className="h-5 w-5 text-yellow-400 mr-1" />
+            <StarIcon className="h-5 w-5 text-yellow-400 mr-1" />
             <StarIcon className="h-5 w-5 text-yellow-400" />
           </div>
         </div>
