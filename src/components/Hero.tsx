@@ -130,19 +130,19 @@ const Hero = () => {
             </h1>
             <ul className="text-white mt-8 relative z-20">
               <li className="mt-3 flex items-center text-normal">
-                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/50">
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/10">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Déclaration simplifiée au statut d&apos;auto-entrepreneur 2024
               </li>
               <li className="mt-3 flex items-center text-normal">
-                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/50">
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/10">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Déclaration simple et rapide
               </li>
               <li className="mt-3 flex items-center text-normal">
-                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/50">
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/10">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Dossier traité sous 24h
