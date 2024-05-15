@@ -122,7 +122,7 @@ const Hero = () => {
             <img
               src="/logo.png"
               alt="hero"
-              className="w-48 h-auto absolute -top-5 -left-5 z-10 opacity-60"
+              className="md:w-48 w-32 h-auto absolute -top-3 -left-3 md:-top-5 md:-left-5 z-10 opacity-60"
             />
             <h1 className="text-white font-bold sm:text-6xl text-4xl relative z-20">
               Créez votre <br /> auto-entreprise <br /> en quelques clics
@@ -130,19 +130,19 @@ const Hero = () => {
             <ul className="text-white mt-8 relative z-20">
               <li className="mt-3 flex items-center text-normal">
                 <div className="flex justify-center items-center">
-                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-white mr-3" />
+                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-cyan-700 mr-3" />
                 </div>
                 Déclaration simplifiée au statut d&apos;auto-entrepreneur 2024
               </li>
               <li className="mt-3 flex items-center text-normal">
                 <div className="flex justify-center items-center">
-                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-white mr-3" />
+                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-cyan-700 mr-3" />
                 </div>
                 Déclaration simple et rapide
               </li>
               <li className="mt-3 flex items-center text-normal">
                 <div className="flex justify-center items-center">
-                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-white mr-3" />
+                  <CheckCircleIcon className="min-w-[12px] h-7 w-auto text-cyan-700 mr-3" />
                 </div>
                 Dossier traité sous 24h
               </li>
