@@ -2,12 +2,13 @@ import { avis } from "@/utils/avis";
 
 const Avis = () => {
   return (
-    <section className="bg-white bg-slate-50 mt-20">
+    <section className="bg-slate-700 mt-20 py-24 relative">
+      <div className="absolute bottom-0 right-0 h-4 bg-slate-300 w-full" />
       <div className="mx-auto sm:px-6 lg:px-8 flex justify-between md:flex-row flex-col ">
         {avis.slice(0, 5).map((avis, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center gap-y-6 py-12 md:max-w-[18%] w-full border border-slate-100 rounded-md p-2 md:mt-0 mt-5"
+            className="flex bg-white flex-col items-center justify-center gap-y-6 py-12 md:max-w-[18%] w-full border border-slate-100 rounded-md p-2 md:mt-0 mt-5"
           >
             <div className="flex items-center gap-x-4 text-slate-700">
               <div className="flex flex-col items-center">
