@@ -146,8 +146,8 @@ const StepManager = () => {
             disabled={disabled}
             onClick={handleStep}
             className={`${
-              disabled ? "bg-cyan-900/70" : "bg-cyan-900"
-            }  text-white w-full py-2 rounded-md mt-10 hover:bg-cyan-900/70 transition duration-150 easeInOut`}
+              disabled ? "bg-green-700/70" : "bg-green-700"
+            }  text-white w-full py-2 rounded-md mt-10 hover:bg-green-700/70 transition duration-150 easeInOut`}
           >
             Continuer
           </button>
