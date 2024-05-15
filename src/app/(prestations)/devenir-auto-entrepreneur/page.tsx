@@ -24,7 +24,7 @@ const page = () => {
         <CTA />
         <Avis />
       </main>
-      <BigFooter />
+      <BigFooter marginTop="0" />
     </>
   );
 };
