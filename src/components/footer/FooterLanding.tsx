@@ -3,8 +3,8 @@ import { StarIcon } from "@heroicons/react/20/solid";
 
 const FooterLanding = () => {
   return (
-    <footer className="w-full py-5 text-slate-700 bg-slate-50 mt-24 ">
-      <div className="mx-auto flex max-w-6xl items-center justify-between  p-3 lg:px-8">
+    <footer className="w-full py-5 text-slate-700 bg-white">
+      <div className="mx-auto flex max-w-6xl items-center justify-between p-5 lg:p-8">
         <div className="flex flex-col">
           <div className="flex lg:flex-1">
             <div className="-m-1.5 p-1.5">
