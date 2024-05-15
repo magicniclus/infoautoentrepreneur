@@ -26,7 +26,8 @@ const Etapes = ({ titre }: { titre?: string }) => {
     },
   ];
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-slate-50 relative">
+      <div className="absolute bottom-0 right-0 h-4 bg-slate-300 w-full" />
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         {titre && (
           <h2 className="text-4xl font-bold leading-10 text-center text-slate-700 mb-20">
