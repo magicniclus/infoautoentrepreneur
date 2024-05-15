@@ -35,8 +35,8 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
       margin: "20px auto",
     },
     header: {
-      color: "#15803d",
-      borderBottom: "2px solid #15803d",
+      color: "#164e63",
+      borderBottom: "2px solid #164e63",
       paddingBottom: "10px",
     },
     subHeader: {

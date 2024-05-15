@@ -317,7 +317,7 @@ const View = () => {
                           <span className="text-lg font-bold">A venir :</span>{" "}
                           <br />
                           <p>Outil de gestion, de facturation et de devis.</p>
-                          <button className="p-2 mt-3 text-white bg-green-700 rounded-md">
+                          <button className="p-2 mt-3 text-white bg-cyan-900 rounded-md">
                             Me tenir informé
                           </button>
                         </li>
@@ -416,7 +416,7 @@ const View = () => {
                 <li className="p-2 py-5 mt-5 text-sm text-center text-gray-400 border border-gray-400 rounded-md">
                   <span className="text-lg font-bold">A venir :</span> <br />
                   <p>Outil de gestion, de facturation et de devis.</p>
-                  <button className="p-2 mt-3 text-white bg-green-700 rounded-md">
+                  <button className="p-2 mt-3 text-white bg-cyan-900 rounded-md">
                     Me tenir informé
                   </button>
                 </li>

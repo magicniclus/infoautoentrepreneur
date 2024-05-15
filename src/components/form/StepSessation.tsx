@@ -14,7 +14,7 @@ const StepSessation = () => {
           className={`flex items-center ${
             step < 2
               ? "font-bold text-slate-400 border-slate-400"
-              : " text-green-700  border-green-700 font-bold"
+              : " text-cyan-900  border-cyan-900 font-bold"
           }`}
         >
           <div
@@ -30,7 +30,7 @@ const StepSessation = () => {
               ? `${
                   step === 2 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-green-700  border-green-700 font-bold"
+              : " text-cyan-900  border-cyan-900 font-bold"
           }`}
         >
           <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">
@@ -44,7 +44,7 @@ const StepSessation = () => {
               ? `${
                   step === 3 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-green-700  border-green-700 font-bold"
+              : " text-cyan-900  border-cyan-900 font-bold"
           }`}
         >
           <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">

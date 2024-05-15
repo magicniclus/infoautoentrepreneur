@@ -42,7 +42,7 @@ const faqsModificationAutoEntreprise = [
     question: (
       <>
         Quand est-il impératif de notifier une{" "}
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           modification de mon auto-entreprise
         </span>{" "}
         ?
@@ -56,7 +56,7 @@ const faqsModificationAutoEntreprise = [
     question: (
       <>
         Quel est le coût associé à la{" "}
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           modification de l&apos;adresse
         </span>{" "}
         de mon auto-entreprise ?
@@ -70,7 +70,7 @@ const faqsModificationAutoEntreprise = [
     question: (
       <>
         À partir de quand puis-je utiliser ma{" "}
-        <span className="text-green-700 font-semibold">nouvelle adresse</span> ?
+        <span className="text-cyan-900 font-semibold">nouvelle adresse</span> ?
       </>
     ),
     answer:
@@ -81,7 +81,7 @@ const faqsModificationAutoEntreprise = [
     question: (
       <>
         Quels sont les{" "}
-        <span className="text-green-700 font-semibold">documents requis</span>{" "}
+        <span className="text-cyan-900 font-semibold">documents requis</span>{" "}
         pour modifier les détails de mon auto-entreprise ?
       </>
     ),
@@ -93,7 +93,7 @@ const faqsModificationAutoEntreprise = [
     question: (
       <>
         Quels changements nécessitent une{" "}
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           notification à mon CFE
         </span>{" "}
         ?
@@ -107,7 +107,7 @@ const faqsModificationAutoEntreprise = [
     question: (
       <>
         Pourquoi est-il nécessaire de{" "}
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           déclarer un changement d’adresse
         </span>{" "}
         ?
@@ -121,7 +121,7 @@ const faqsModificationAutoEntreprise = [
     question: (
       <>
         Quelle incidence a un{" "}
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           changement d’adresse
         </span>{" "}
         sur mon auto-entreprise ?

@@ -5,7 +5,7 @@ const QuiSommesNous = () => {
     <div className="bg-white py-16">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <p className="text-base font-semibold leading-7 text-green-700">
+          <p className="text-base font-semibold leading-7 text-cyan-900">
             Qui sommes-nous ?
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -45,7 +45,7 @@ const QuiSommesNous = () => {
           <div className="mt-10 flex">
             <a
               href="#"
-              className="rounded-md bg-green-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
+              className="rounded-md bg-cyan-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-900"
             >
               Devenir Auto-entrepreneur
             </a>

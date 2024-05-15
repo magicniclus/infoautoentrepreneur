@@ -244,7 +244,7 @@ const MonEspece = () => {
             d&apos;auto-entreprise{" "}
           </h1>
           <div className="flex flex-col items-center justify-center p-2 px-6 mt-5 lg:px-8 md:mt-0 bg-slate-100">
-            <h2 className="text-sm font-semibold text-center text-green-700">
+            <h2 className="text-sm font-semibold text-center text-cyan-900">
               Numéro de dossier
             </h2>
             <h3 className="text-sm">
@@ -284,8 +284,8 @@ const MonEspece = () => {
             disabled={disabled}
             onClick={step === 4 ? handleDataSend : handleNextStep}
             className={`${
-              disabled ? "bg-green-700/40" : "bg-green-700"
-            } text-white px-4 py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 ease-in-out`}
+              disabled ? "bg-cyan-900/40" : "bg-cyan-900"
+            } text-white px-4 py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 ease-in-out`}
           >
             {step === 4 ? "Terminer" : "Suivant"}
           </button>

@@ -8,18 +8,18 @@ const FormStepView = ({ step }: { step: number }) => {
           step === 1
             ? "border border-slate-700"
             : step > 1
-            ? "border border-green-700"
+            ? "border border-cyan-900"
             : null
         }`}
       >
         {step > 1 && (
-          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-green-700" />
+          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-cyan-900" />
         )}
         <div className="flex items-center justify-between p-2">
           <div
             className={`flex items-center justify-center w-6 h-6 ${
               step > 1
-                ? "bg-green-700 text-white border border-green-600"
+                ? "bg-cyan-900 text-white border border-green-600"
                 : "bg-slate-100 text-slate-700"
             } rounded-full`}
           >
@@ -35,18 +35,18 @@ const FormStepView = ({ step }: { step: number }) => {
           step === 2
             ? "border border-slate-700"
             : step > 2
-            ? "border border-green-700"
+            ? "border border-cyan-900"
             : null
         }`}
       >
         {step > 2 && (
-          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-green-700" />
+          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-cyan-900" />
         )}
         <div className="flex items-center justify-between p-2">
           <div
             className={`flex items-center justify-center w-6 h-6 ${
               step > 2
-                ? "bg-green-700 text-white border border-green-600"
+                ? "bg-cyan-900 text-white border border-green-600"
                 : "bg-slate-100 text-slate-700"
             } rounded-full`}
           >
@@ -62,18 +62,18 @@ const FormStepView = ({ step }: { step: number }) => {
           step === 3
             ? "border border-slate-700"
             : step > 3
-            ? "border border-green-700"
+            ? "border border-cyan-900"
             : null
         }`}
       >
         {step > 3 && (
-          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-green-700" />
+          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-cyan-900" />
         )}
         <div className="flex items-center justify-between p-2">
           <div
             className={`flex items-center justify-center w-6 h-6 ${
               step > 3
-                ? "bg-green-700 text-white border border-green-600"
+                ? "bg-cyan-900 text-white border border-green-600"
                 : "bg-slate-100 text-slate-700"
             } rounded-full`}
           >
@@ -89,18 +89,18 @@ const FormStepView = ({ step }: { step: number }) => {
           step === 4
             ? "border border-slate-700"
             : step > 4
-            ? "border border-green-700"
+            ? "border border-cyan-900"
             : null
         }`}
       >
         {step > 4 && (
-          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-green-700" />
+          <CheckCircleIcon className="absolute top-0.5 right-0.5 w-5 h-5 text-cyan-900" />
         )}
         <div className="flex items-center justify-between p-2">
           <div
             className={`flex items-center justify-center w-6 h-6 ${
               step > 4
-                ? "bg-green-700 text-white border border-green-600"
+                ? "bg-cyan-900 text-white border border-green-600"
                 : "bg-slate-100 text-slate-700"
             } rounded-full`}
           >

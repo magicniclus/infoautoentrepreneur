@@ -19,8 +19,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Comment devenir{" "}
-        <span className="text-green-700 font-semibold">auto-entrepreneur</span>{" "}
-        ?
+        <span className="text-cyan-900 font-semibold">auto-entrepreneur</span> ?
       </>
     ),
     answer:
@@ -31,10 +30,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Quelles sont les étapes pour s&apos;inscrire en tant qu&apos;
-        <span className="text-green-700 font-semibold">
-          auto-entrepreneur
-        </span>{" "}
-        ?
+        <span className="text-cyan-900 font-semibold">auto-entrepreneur</span> ?
       </>
     ),
     answer:
@@ -44,7 +40,7 @@ const faqsData: Faq[] = [
     id: 3,
     question: (
       <>
-        Les <span className="text-green-700 font-semibold">retraités</span>{" "}
+        Les <span className="text-cyan-900 font-semibold">retraités</span>{" "}
         peuvent-ils ouvrir une auto-entreprise ?
       </>
     ),
@@ -55,7 +51,7 @@ const faqsData: Faq[] = [
     id: 4,
     question: (
       <>
-        Les <span className="text-green-700 font-semibold">salariés</span>{" "}
+        Les <span className="text-cyan-900 font-semibold">salariés</span>{" "}
         peuvent-ils créer une auto-entreprise ?
       </>
     ),
@@ -66,7 +62,7 @@ const faqsData: Faq[] = [
     id: 6,
     question: (
       <>
-        Un <span className="text-green-700 font-semibold">mineur</span> peut-il
+        Un <span className="text-cyan-900 font-semibold">mineur</span> peut-il
         devenir auto-entrepreneur ?
       </>
     ),
@@ -78,7 +74,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Pourquoi se faire accompagner pour déclarer son{" "}
-        <span className="text-green-700 font-semibold">auto-entreprise</span> ?
+        <span className="text-cyan-900 font-semibold">auto-entreprise</span> ?
       </>
     ),
     answer:
@@ -89,7 +85,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Quelle est la différence entre une{" "}
-        <span className="text-green-700 font-semibold">auto-entreprise</span> et
+        <span className="text-cyan-900 font-semibold">auto-entreprise</span> et
         une entreprise individuelle ?
       </>
     ),
@@ -102,10 +98,7 @@ const faqsData: Faq[] = [
       <>
         Quels justificatifs sont nécessaires pour s&apos;inscrire en tant
         qu&apos;
-        <span className="text-green-700 font-semibold">
-          auto-entrepreneur
-        </span>{" "}
-        ?
+        <span className="text-cyan-900 font-semibold">auto-entrepreneur</span> ?
       </>
     ),
     answer:
@@ -116,8 +109,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Dois-je effectuer un stage obligatoire pour devenir{" "}
-        <span className="text-green-700 font-semibold">auto-entrepreneur</span>{" "}
-        ?
+        <span className="text-cyan-900 font-semibold">auto-entrepreneur</span> ?
       </>
     ),
     answer:
@@ -129,7 +121,7 @@ const faqsData: Faq[] = [
       <>
         Les activités nécessitant un diplôme ou des qualifications spécifiques
         peuvent-elles être exercées en{" "}
-        <span className="text-green-700 font-semibold">auto-entreprise</span> ?
+        <span className="text-cyan-900 font-semibold">auto-entreprise</span> ?
       </>
     ),
     answer:
@@ -140,8 +132,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Quels sont les plafonds de chiffre d&apos;affaires pour un{" "}
-        <span className="text-green-700 font-semibold">auto-entrepreneur</span>{" "}
-        ?
+        <span className="text-cyan-900 font-semibold">auto-entrepreneur</span> ?
       </>
     ),
     answer:
@@ -152,7 +143,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Quel est le coût pour créer une{" "}
-        <span className="text-green-700 font-semibold">micro-entreprise</span>{" "}
+        <span className="text-cyan-900 font-semibold">micro-entreprise</span>{" "}
         via le Portail Auto-Entrepreneur ?
       </>
     ),
@@ -164,7 +155,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Quel plafond de chiffre d&apos;affaires s&apos;applique à mon{" "}
-        <span className="text-green-700 font-semibold">auto-entreprise</span> si
+        <span className="text-cyan-900 font-semibold">auto-entreprise</span> si
         j&apos;exerce une activité mixte ?
       </>
     ),
@@ -176,7 +167,7 @@ const faqsData: Faq[] = [
     question: (
       <>
         Existe-t-il des aides financières pour la création d&apos;une{" "}
-        <span className="text-green-700 font-semibold">auto-entreprise</span> ?
+        <span className="text-cyan-900 font-semibold">auto-entreprise</span> ?
       </>
     ),
     answer:

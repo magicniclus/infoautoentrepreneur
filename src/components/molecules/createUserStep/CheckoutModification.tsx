@@ -93,7 +93,7 @@ const CheckoutModification = () => {
       <div className="w-full md:px-0 px-4">
         <div className="mb-7 text-center bg-slate-200 text-slate-700 rounded-md py-4 px-2">
           <div className="flex items-center text-xs w-[90%] mx-auto mb-7">
-            <CheckCircle className="h-4 w-4 text-green-700 mr-2" />
+            <CheckCircle className="h-4 w-4 text-cyan-900 mr-2" />
             <h3 className="text-start">
               Dossier enregistré{" "}
               <span className="font-semibold">

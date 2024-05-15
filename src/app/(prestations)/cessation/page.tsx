@@ -12,7 +12,7 @@ const faqsCessationAutoEntreprise = [
     id: 1,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Cessation, radiation et suspension : quelles différences ?
         </span>
       </>
@@ -24,7 +24,7 @@ const faqsCessationAutoEntreprise = [
     id: 2,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Faut-il fermer son auto-entreprise en cas de déménagement ?
         </span>
       </>
@@ -36,7 +36,7 @@ const faqsCessationAutoEntreprise = [
     id: 3,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Cessation d’activité : d’autres formalités sont-elles nécessaires ?
         </span>
       </>
@@ -48,7 +48,7 @@ const faqsCessationAutoEntreprise = [
     id: 4,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Quel est le prix d’une fermeture d’auto-entreprise ?
         </span>
       </>
@@ -60,7 +60,7 @@ const faqsCessationAutoEntreprise = [
     id: 5,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Fin de l’activité d’auto-entrepreneur : est-ce que j’ai le droit au
           chômage ?
         </span>
@@ -73,7 +73,7 @@ const faqsCessationAutoEntreprise = [
     id: 6,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Est-il possible de rouvrir son auto-entreprise plus tard ?
         </span>
       </>
@@ -85,7 +85,7 @@ const faqsCessationAutoEntreprise = [
     id: 7,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Quel formulaire pour fermer sa micro-entreprise ?
         </span>
       </>
@@ -97,7 +97,7 @@ const faqsCessationAutoEntreprise = [
     id: 8,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Cessation d’activité : quel impact sur la déclaration de revenus ?
         </span>
       </>
@@ -109,7 +109,7 @@ const faqsCessationAutoEntreprise = [
     id: 9,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Suis-je obligé de fermer mon auto-entreprise si mon chiffre d’affaires
           est nul ?
         </span>
@@ -122,7 +122,7 @@ const faqsCessationAutoEntreprise = [
     id: 10,
     question: (
       <>
-        <span className="text-green-700 font-semibold">
+        <span className="text-cyan-900 font-semibold">
           Dois-je fermer ma micro-entreprise si je dépasse les plafonds de
           chiffre d’affaires ?
         </span>

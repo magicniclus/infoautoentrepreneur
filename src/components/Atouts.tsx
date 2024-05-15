@@ -8,7 +8,7 @@ const Atouts = () => {
             <div className="lg:max-w-lg">
               <p className="mt-2 text-3xl font-bold tracking-tight text-slate-700 sm:text-4xl">
                 Pourquoi choisir <br />{" "}
-                <span className="text-green-700">Info Auto-Entrepreneur</span>{" "}
+                <span className="text-cyan-900">Info Auto-Entrepreneur</span>{" "}
                 <br />
                 pour votre Auto-Entreprise?
               </p>
@@ -20,7 +20,7 @@ const Atouts = () => {
               </p>
               <a
                 href="#form"
-                className={`bg-green-700 p-5 text-white w-full py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 easeInOut cursor-pointer`}
+                className={`bg-cyan-900 p-5 text-white w-full py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 easeInOut cursor-pointer`}
               >
                 Devenir Auto-Entrepreneur
               </a>

@@ -37,8 +37,8 @@ const EtapesCessation = () => {
                   <CursorArrowRippleIcon className="h-12 w-12 text-blue-700" />
                 </dt>
               ) : stat.id === 2 ? (
-                <dt className="p-3 bg-green-700/10 rounded-full self-center">
-                  <DocumentMagnifyingGlassIcon className="h-12 w-12 text-green-700" />
+                <dt className="p-3 bg-cyan-900/10 rounded-full self-center">
+                  <DocumentMagnifyingGlassIcon className="h-12 w-12 text-cyan-900" />
                 </dt>
               ) : (
                 <dt className="p-3 bg-yellow-500/10 rounded-full self-center">

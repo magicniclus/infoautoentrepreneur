@@ -38,7 +38,7 @@ const NavBar = ({
           display: block;
           width: 0%;
           height: 3px;
-          background: #15803d;
+          background: #164e63;
           opacity: 0;
           transition: all 0.3s ease;
           transform: translateX(-50%);
@@ -57,7 +57,7 @@ const NavBar = ({
           display: block;
           width: 100%;
           height: 3px;
-          background: #15803d;
+          background: #164e63;
         }
       `}</style>
       <header className="w-full md:bg-slate-100 relative">
@@ -75,7 +75,7 @@ const NavBar = ({
                     <span
                       className={`font-bold ${
                         valueAfterSlash === "devenir-auto-entrepreneur" &&
-                        "text-green-700 underContinu"
+                        "text-cyan-900 underContinu"
                       }`}
                     >
                       Devenir
@@ -88,7 +88,7 @@ const NavBar = ({
                     <span
                       className={`font-bold ${
                         valueAfterSlash === "modification" &&
-                        "text-green-700 underContinu"
+                        "text-cyan-900 underContinu"
                       }`}
                     >
                       Modification
@@ -117,7 +117,7 @@ const NavBar = ({
           {connexion && (
             <a
               href="#"
-              className="py-1 px-5 border border-green-700 text-green-700 bg-green-50 rounded-full hover:bg-green-700 hover:border-white hover:text-white transition-all duration-300 ease-in-out"
+              className="py-1 px-5 border border-cyan-900 text-cyan-900 bg-green-50 rounded-full hover:bg-cyan-900 hover:border-white hover:text-white transition-all duration-300 ease-in-out"
             >
               Mon Espace
             </a>

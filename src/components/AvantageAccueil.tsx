@@ -32,7 +32,7 @@ const AvantageAccueil = () => {
               className="flex flex-col mx-auto max-w-xs gap-y-4"
             >
               <dt className="rounded-full self-center">
-                <CheckCircleIcon className="h-9 w-9 text-green-700" />
+                <CheckCircleIcon className="h-9 w-9 text-cyan-900" />
               </dt>
               <dd className=" font-semibold tracking-tight text-slate-700 max-w-[150px]">
                 {stat.value}

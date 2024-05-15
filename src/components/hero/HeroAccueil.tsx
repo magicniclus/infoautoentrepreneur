@@ -32,7 +32,7 @@ const HeroAccueil = () => {
           </h2>
           <a
             href="/devenir-auto-entrepreneur"
-            className={`${"bg-green-700"} text-white w-full py-2 rounded-md mt-5 hover:bg-green-700/90 transition duration-150 easeInOut max-w-max px-3`}
+            className={`${"bg-cyan-900"} text-white w-full py-2 rounded-md mt-5 hover:bg-cyan-900/90 transition duration-150 easeInOut max-w-max px-3`}
           >
             Devenir Auto-Entrepreneur
           </a>

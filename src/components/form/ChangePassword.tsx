@@ -33,7 +33,7 @@ const ChangePassword = () => {
         />
         <button
           type="submit"
-          className={`${"bg-green-700"}  text-white w-full py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 easeInOut w-[450px]`}
+          className={`${"bg-cyan-900"}  text-white w-full py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 easeInOut w-[450px]`}
         >
           Modifier
         </button>

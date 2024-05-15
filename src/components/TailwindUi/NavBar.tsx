@@ -99,7 +99,7 @@ const NavBar = () => {
           display: block;
           width: 0%;
           height: 3px;
-          background: #15803d;
+          background: #164e63;
           opacity: 0;
           transition: all 0.3s ease;
           transform: translateX(-50%);
@@ -118,12 +118,13 @@ const NavBar = () => {
           display: block;
           width: 100%;
           height: 3px;
-          background: #15803d;
+          background: #164e63;
         }
       `}</style>
-      <header className="bg-white">
+      <header className="bg-white relative">
+        <div className="absolute bottom-0 right-0 h-4 bg-slate-300 w-full" />
         <nav
-          className="mx-auto flex max-w-6xl items-center justify-between p-3 lg:px-8"
+          className="mx-auto flex max-w-6xl items-center justify-between p-7 lg:px-8"
           aria-label="Global"
         >
           <div className="flex lg:flex-1 mr-7">
@@ -154,7 +155,7 @@ const NavBar = () => {
               <span
                 className={`font-bold ${
                   valueAfterSlash === "devenir-auto-entrepreneur" &&
-                  "text-green-700 underContinu"
+                  "text-cyan-900 underContinu"
                 }`}
               >
                 Devenir
@@ -165,7 +166,7 @@ const NavBar = () => {
               <span
                 className={`font-bold ${
                   valueAfterSlash === "modification" &&
-                  "text-green-700 underContinu"
+                  "text-cyan-900 underContinu"
                 }`}
               >
                 Modification
@@ -176,7 +177,7 @@ const NavBar = () => {
               <span
                 className={`font-bold ${
                   valueAfterSlash === "cessation" &&
-                  "text-green-700 underContinu"
+                  "text-cyan-900 underContinu"
                 }`}
               >
                 Cessation
@@ -190,7 +191,7 @@ const NavBar = () => {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             {!userInLoggin ? (
               <Dialog>
-                <DialogTrigger className="text-sm font-semibold leading-6 text-green-700 py-1 px-3 border border-green-700 bg-green-50 rounded-full hover:bg-green-700 hover:border-white hover:text-white transition-all duration-300 ease-in-out">
+                <DialogTrigger className="text-sm font-semibold leading-6 text-cyan-900 py-1 px-3 border border-cyan-900 rounded-full hover:bg-cyan-900 hover:border-white hover:text-white transition-all duration-300 ease-in-out">
                   Mon Espace <span aria-hidden="true">&rarr;</span>
                 </DialogTrigger>
                 <DialogContent>
@@ -251,7 +252,7 @@ const NavBar = () => {
                         </div>
                         <button
                           type="submit"
-                          className="bg-green-700 text-white w-full py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 easeInOut"
+                          className="bg-cyan-900 text-white w-full py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 easeInOut"
                         >
                           Me connecter
                         </button>
@@ -263,7 +264,7 @@ const NavBar = () => {
             ) : (
               <a
                 href="/mon-espace"
-                className="text-sm font-semibold leading-6 text-green-700 py-1 px-3 border border-green-700 bg-green-50 rounded-full hover:bg-green-700 hover:border-white hover:text-white transition-all duration-300 ease-in-out"
+                className="text-sm font-semibold leading-6 text-cyan-900 py-1 px-3 border border-cyan-900 rounded-full hover:bg-cyan-900 hover:border-white hover:text-white transition-all duration-300 ease-in-out"
               >
                 {" "}
                 Mon Espace <span aria-hidden="true">&rarr;</span>
@@ -319,7 +320,7 @@ const NavBar = () => {
                   </a>
                   {!userInLoggin ? (
                     <Dialog>
-                      <DialogTrigger className="text-sm font-semibold leading-6 text-green-700 py-1 px-3 border border-green-700 bg-green-50 rounded-full hover:bg-green-700 hover:border-white hover:text-white transition-all duration-300 ease-in-out">
+                      <DialogTrigger className="text-sm font-semibold leading-6 text-cyan-900 py-1 px-3 border border-cyan-900 rounded-full hover:bg-cyan-900 hover:border-white hover:text-white transition-all duration-300 ease-in-out">
                         Mon Espace <span aria-hidden="true">&rarr;</span>
                       </DialogTrigger>
                       <DialogContent>
@@ -382,7 +383,7 @@ const NavBar = () => {
                               </div>
                               <button
                                 type="submit"
-                                className="bg-green-700 text-white w-full py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 easeInOut"
+                                className="bg-cyan-900 text-white w-full py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 easeInOut"
                               >
                                 Me connecter
                               </button>
@@ -394,7 +395,7 @@ const NavBar = () => {
                   ) : (
                     <a
                       href="/mon-espace"
-                      className="text-sm font-semibold leading-6 text-green-700 py-1 px-3 border border-green-700 bg-green-50 rounded-full hover:bg-green-700 hover:border-white hover:text-white transition-all duration-300 ease-in-out"
+                      className="text-sm font-semibold leading-6 text-cyan-900 py-1 px-3 border border-cyan-900 rounded-full hover:bg-cyan-900 hover:border-white hover:text-white transition-all duration-300 ease-in-out"
                     >
                       Mon Espace <span aria-hidden="true">&rarr;</span>
                     </a>

@@ -509,26 +509,26 @@ const DocumentComplementaire = () => {
             onDrop={handleIdDrop}
             className={`mt-2 flex justify-center rounded-md border ${
               fileId
-                ? "border-green-700/70"
+                ? "border-cyan-900/70"
                 : "border-dashed border-slate-700/50"
             } px-6 py-10 relative`}
           >
             {fileId && (
-              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-green-700">
-                <CheckIcon className="h-4 w-4 text-green-700" />
+              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-cyan-900">
+                <CheckIcon className="h-4 w-4 text-cyan-900" />
               </div>
             )}
             <div className="text-center">
               <PhotoIcon
                 className={`mx-auto h-12 w-12 ${
-                  fileId ? "text-green-700" : "text-gray-300"
+                  fileId ? "text-cyan-900" : "text-gray-300"
                 }`}
                 aria-hidden="true"
               />
               <div className="mt-4 flex flex-col text-sm leading-6 text-slate-700">
                 <label
                   htmlFor="id-file-upload"
-                  className="relative cursor-pointer rounded-md bg-white font-semibold text-green-700 hover:text-green-600"
+                  className="relative cursor-pointer rounded-md bg-white font-semibold text-cyan-900 hover:text-green-600"
                 >
                   <span>
                     {fileId ? (
@@ -599,28 +599,28 @@ const DocumentComplementaire = () => {
           <div
             className={`mt-2 flex justify-center rounded-md border ${
               filePasseport
-                ? "border-green-700/70"
+                ? "border-cyan-900/70"
                 : "border-dashed border-slate-700/50"
             } px-6 py-10 relative`}
             onDragOver={handlePasseportDragOver}
             onDrop={handlePasseportDrop}
           >
             {filePasseport && (
-              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-green-700">
-                <CheckIcon className="h-4 w-4 text-green-700" />
+              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-cyan-900">
+                <CheckIcon className="h-4 w-4 text-cyan-900" />
               </div>
             )}
             <div className="text-center">
               <PhotoIcon
                 className={`mx-auto h-12 w-12 ${
-                  filePasseport ? "text-green-700" : "text-gray-300"
+                  filePasseport ? "text-cyan-900" : "text-gray-300"
                 }`}
                 aria-hidden="true"
               />
               <div className="mt-4 flex flex-col text-sm leading-6 text-slate-700">
                 <label
                   htmlFor="passport-file-upload"
-                  className="relative cursor-pointer rounded-md bg-white font-semibold text-green-700 hover:text-green-600"
+                  className="relative cursor-pointer rounded-md bg-white font-semibold text-cyan-900 hover:text-green-600"
                 >
                   <span>
                     {filePasseport ? (
@@ -688,21 +688,21 @@ const DocumentComplementaire = () => {
           <div
             className={`mt-2 flex justify-center rounded-md border relative ${
               filesAdresse.length > 0
-                ? "border-green-700/70"
+                ? "border-cyan-900/70"
                 : "border-dashed border-slate-700/50"
             } px-6 py-10 relative`}
             onDragOver={handleAdresseDragOver}
             onDrop={handleAdresseDrop}
           >
             {filesAdresse.length > 0 && (
-              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-green-700">
-                <CheckIcon className="h-4 w-4 text-green-700" />
+              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-cyan-900">
+                <CheckIcon className="h-4 w-4 text-cyan-900" />
               </div>
             )}
             <div className="text-center">
               <PhotoIcon
                 className={`mx-auto h-12 w-12 ${
-                  filesAdresse.length > 0 ? "text-green-700" : "text-gray-300"
+                  filesAdresse.length > 0 ? "text-cyan-900" : "text-gray-300"
                 }`}
                 aria-hidden="true"
               />
@@ -722,7 +722,7 @@ const DocumentComplementaire = () => {
                 ))}
                 <div className="mt-4 flex items-center flex-col text-sm leading-6 text-slate-700">
                   {filesAdresse.length < 3 && (
-                    <label className="relative cursor-pointer rounded-md bg-white font-semibold text-green-700 hover:text-green-600">
+                    <label className="relative cursor-pointer rounded-md bg-white font-semibold text-cyan-900 hover:text-green-600">
                       <span>Ajouter mes fichiers (maximum 3)</span>
                       <input
                         id="adresse-file-upload"
@@ -813,22 +813,22 @@ const DocumentComplementaire = () => {
           <div
             className={`mt-2 flex justify-center rounded-md border relative ${
               filesDeclaration.length > 0
-                ? "border-green-700/70"
+                ? "border-cyan-900/70"
                 : "border-dashed border-slate-700/50"
             } px-6 py-10 relative`}
             onDragOver={handleDeclarationDragOver}
             onDrop={handleDeclarationDrop}
           >
             {filesDeclaration.length > 0 && (
-              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-green-700">
-                <CheckIcon className="h-4 w-4 text-green-700" />
+              <div className="absolute top-5 right-5 rounded-full bg-white h-5 w-5 flex justify-center items-center border-cyan-900">
+                <CheckIcon className="h-4 w-4 text-cyan-900" />
               </div>
             )}
             <div className="text-center">
               <PhotoIcon
                 className={`mx-auto h-12 w-12 ${
                   filesDeclaration.length > 0
-                    ? "text-green-700"
+                    ? "text-cyan-900"
                     : "text-gray-300"
                 }`}
                 aria-hidden="true"
@@ -850,7 +850,7 @@ const DocumentComplementaire = () => {
                 ))}
                 <div className="mt-4 flex items-center flex-col text-sm leading-6 text-slate-700">
                   {filesDeclaration.length < 3 && ( // S'assurer que cela ne s'affiche que si moins de trois fichiers sont chargés
-                    <label className="relative cursor-pointer rounded-md bg-white font-semibold text-green-700 hover:text-green-600">
+                    <label className="relative cursor-pointer rounded-md bg-white font-semibold text-cyan-900 hover:text-green-600">
                       <span>Ajouter mes fichiers (maximum 3)</span>
                       <input
                         id="declaration-file-upload"

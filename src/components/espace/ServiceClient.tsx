@@ -141,8 +141,8 @@ const ServiceClient = () => {
             disabled={disabled}
             onClick={handleSubmit}
             className={`${
-              disabled ? "bg-green-700/40" : "bg-green-700"
-            } text-white px-4 py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 ease-in-out mt-10`}
+              disabled ? "bg-cyan-900/40" : "bg-cyan-900"
+            } text-white px-4 py-2 rounded-md mt-5 hover:bg-cyan-900/70 transition duration-150 ease-in-out mt-10`}
           >
             Envoyer
           </button>

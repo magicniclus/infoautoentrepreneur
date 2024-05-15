@@ -44,11 +44,11 @@ const NavBarLanding = ({ dossier = true }: { dossier?: boolean }) => {
             </div>
           )}
           <div className=" md:flex hidden items-center justify-center relative">
-            <PhoneIcon className="h-6 w-6 text-green-700 mr-3" />
+            <PhoneIcon className="h-6 w-6 text-cyan-900 mr-3" />
             <div className="flex flex-col justify-between">
               <a
                 href="tel:+33972164963"
-                className="font-semibold text-xs md:text-sm text-green-700"
+                className="font-semibold text-xs md:text-sm text-cyan-900"
               >
                 09 72 16 49 63
               </a>

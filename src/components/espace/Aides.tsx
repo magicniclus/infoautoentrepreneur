@@ -34,14 +34,14 @@ const Aides = () => {
           </p>
           <ul className="mt-8 space-y-4">
             <li className="flex items-center">
-              <CheckCircleIcon className="h-7 w-7 text-green-700 mr-3" />
+              <CheckCircleIcon className="h-7 w-7 text-cyan-900 mr-3" />
               <span>
                 <strong>Création simplifiée :</strong> Complétez votre
                 inscription en quelques clics à partir de notre plateforme.
               </span>
             </li>
             <li className="flex items-center">
-              <CheckCircleIcon className="h-7 w-7 text-green-700 mr-3" />
+              <CheckCircleIcon className="h-7 w-7 text-cyan-900 mr-3" />
               <span>
                 <strong>Gestion des déclarations :</strong> Suivi et dépôt
                 automatique de vos déclarations de revenus et cotisations
@@ -49,7 +49,7 @@ const Aides = () => {
               </span>
             </li>
             <li className="flex items-center">
-              <CheckCircleIcon className="h-7 w-7 text-green-700 mr-3" />
+              <CheckCircleIcon className="h-7 w-7 text-cyan-900 mr-3" />
               <span>
                 <strong>Accompagnement personnalisé :</strong> Notre équipe est
                 là pour répondre à toutes vos questions et vous aider à naviguer
@@ -84,7 +84,7 @@ const Aides = () => {
         <div className="mt-16">
           <a
             href="/"
-            className="bg-green-700 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg"
+            className="bg-cyan-900 hover:bg-cyan-900 text-white font-bold py-2 px-4 rounded-lg"
           >
             Découvrez nos services
           </a>

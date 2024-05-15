@@ -182,7 +182,7 @@ const Step = () => {
     <section className="w-full text-slate-700 md:mt-0 mt-10">
       <div className="w-full bg-slate-50 h-max rounded-md py-3 md:block hidden">
         <div className="px-6 lg:px-8 flex flex-col justify-center items-center">
-          <h2 className="font-semibold text-sm text-green-700">
+          <h2 className="font-semibold text-sm text-cyan-900">
             Numero de dossier
           </h2>
           <h3 className="text-sm">{userInfo.dossierId.toLocaleUpperCase()}</h3>
@@ -193,7 +193,7 @@ const Step = () => {
           className={`flex items-center ${
             step < 2
               ? "font-bold text-slate-400 border-slate-400"
-              : " text-green-700  border-green-700 font-bold"
+              : " text-cyan-900  border-cyan-900 font-bold"
           }`}
         >
           <div
@@ -209,7 +209,7 @@ const Step = () => {
               ? `${
                   step === 2 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-green-700  border-green-700 font-bold"
+              : " text-cyan-900  border-cyan-900 font-bold"
           }`}
         >
           <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">
@@ -223,7 +223,7 @@ const Step = () => {
               ? `${
                   step === 3 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-green-700  border-green-700 font-bold"
+              : " text-cyan-900  border-cyan-900 font-bold"
           }`}
         >
           <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">
@@ -237,7 +237,7 @@ const Step = () => {
               ? `${
                   step === 4 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-green-700  border-green-700 font-bold"
+              : " text-cyan-900  border-cyan-900 font-bold"
           }`}
         >
           <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">
@@ -250,7 +250,7 @@ const Step = () => {
       <div className="w-full bg-slate-50 h-max rounded-md py-3 mt-10">
         <div className="px-6 lg:px-8 flex flex-col">
           <h2 className="text-sm">
-            <span className="text-green-700 font-semibold">
+            <span className="text-cyan-900 font-semibold">
               +1 051 000 <br />
             </span>{" "}
             auto-entreprises créées en 2023

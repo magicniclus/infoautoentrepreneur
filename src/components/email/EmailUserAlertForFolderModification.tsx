@@ -27,8 +27,8 @@ export const EmailUserAlertForFolderModification: React.FC<
       margin: "20px auto",
     },
     header: {
-      color: "#15803d",
-      borderBottom: "2px solid #15803d",
+      color: "#164e63",
+      borderBottom: "2px solid #164e63",
       paddingBottom: "10px",
     },
     subHeader: {
@@ -57,7 +57,7 @@ export const EmailUserAlertForFolderModification: React.FC<
     button: {
       display: "inline-block",
       padding: "10px 20px",
-      backgroundColor: "#15803d",
+      backgroundColor: "#164e63",
       color: "#fff",
       textDecoration: "none",
       borderRadius: "5px",

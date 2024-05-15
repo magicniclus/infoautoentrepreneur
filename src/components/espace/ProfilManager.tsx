@@ -83,7 +83,7 @@ const ProfilManager = () => {
               <dd className="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                 <button
                   type="button"
-                  className="font-semibold text-green-700 hover:text-green-700/50"
+                  className="font-semibold text-cyan-900 hover:text-cyan-900/50"
                   onClick={handlePasswordChange}
                 >
                   Modifier

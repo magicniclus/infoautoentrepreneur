@@ -18,7 +18,7 @@ export default function Home() {
       question: (
         <>
           Quels services{" "}
-          <span className="text-green-700 font-semibold">
+          <span className="text-cyan-900 font-semibold">
             Info-AutoEntrepreneur.fr
           </span>{" "}
           offre-t-il aux autoentrepreneurs ?
@@ -32,7 +32,7 @@ export default function Home() {
       question: (
         <>
           Pourquoi choisir{" "}
-          <span className="text-green-700 font-semibold">
+          <span className="text-cyan-900 font-semibold">
             Info-AutoEntrepreneur.fr
           </span>{" "}
           pour gérer mon statut d&apos;autoentrepreneur ?
@@ -46,7 +46,7 @@ export default function Home() {
       question: (
         <>
           Combien coûte l&apos;accompagnement par{" "}
-          <span className="text-green-700 font-semibold">
+          <span className="text-cyan-900 font-semibold">
             Info-AutoEntrepreneur.fr
           </span>{" "}
           ?
@@ -60,7 +60,7 @@ export default function Home() {
       question: (
         <>
           Comment{" "}
-          <span className="text-green-700 font-semibold">
+          <span className="text-cyan-900 font-semibold">
             Info-AutoEntrepreneur.fr
           </span>{" "}
           facilite-t-il les démarches administratives ?
@@ -74,7 +74,7 @@ export default function Home() {
       question: (
         <>
           Quel support ou de problèmes ?{" "}
-          <span className="text-green-700 font-semibold">
+          <span className="text-cyan-900 font-semibold">
             Info-AutoEntrepreneur.fr
           </span>{" "}
           propose-t-il en cas de questions ou de problèmes ?
