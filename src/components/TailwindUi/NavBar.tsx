@@ -99,7 +99,7 @@ const NavBar = () => {
           display: block;
           width: 0%;
           height: 3px;
-          background: #164e63;
+          background: #0e7490;
           opacity: 0;
           transition: all 0.3s ease;
           transform: translateX(-50%);
@@ -118,7 +118,7 @@ const NavBar = () => {
           display: block;
           width: 100%;
           height: 3px;
-          background: #164e63;
+          background: #0e7490;
         }
       `}</style>
       <header className="bg-white relative">
@@ -155,7 +155,7 @@ const NavBar = () => {
               <span
                 className={`font-bold ${
                   valueAfterSlash === "devenir-auto-entrepreneur" &&
-                  "text-cyan-900 underContinu"
+                  "text-cyan-700 underContinu"
                 }`}
               >
                 Devenir
@@ -166,7 +166,7 @@ const NavBar = () => {
               <span
                 className={`font-bold ${
                   valueAfterSlash === "modification" &&
-                  "text-cyan-900 underContinu"
+                  "text-cyan-700 underContinu"
                 }`}
               >
                 Modification
@@ -177,7 +177,7 @@ const NavBar = () => {
               <span
                 className={`font-bold ${
                   valueAfterSlash === "cessation" &&
-                  "text-cyan-900 underContinu"
+                  "text-cyan-700 underContinu"
                 }`}
               >
                 Cessation
