@@ -4,8 +4,8 @@ import { StarIcon } from "@heroicons/react/20/solid";
 const FooterLanding = () => {
   return (
     <footer className="w-full py-5 text-slate-700 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between p-5 lg:p-1">
-        <div className="flex flex-col">
+      <div className="mx-auto flex max-w-6xl items-center justify-between md:flex-row flex-col p-5 lg:p-1">
+        <div className="md:flex hidden flex-col">
           <div className="flex lg:flex-1">
             <div className="-m-1.5 p-1.5">
               <span className="sr-only">Mon-independant.fr</span>
@@ -21,7 +21,7 @@ const FooterLanding = () => {
             &copy; 2024 Tous droits réservés.
           </p>
         </div>
-        <div className="flex justify-center items-center flex-col">
+        <div className="flex justify-center items-center flex-col md:mt-0 mt-10 ">
           <img
             src="/icons/badge.png"
             alt="badge de note"
