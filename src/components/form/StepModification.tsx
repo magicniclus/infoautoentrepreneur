@@ -76,10 +76,10 @@ const StepModification = () => {
           <EnvelopeIcon className="h-4 w-4 mr-4" />
           <div className="flex flex-col justify-between">
             <a
-              href="mailTo:contact@mon-independant.fr"
+              href="mailTo:contact@info-autoentrepreneur.com"
               className="font-semibold text-sm "
             >
-              contact@mon-independant.fr
+              contact@info-autoentrepreneur.com
             </a>
             <p className="text-xs">Du lundi au vendredi - de 9h à 19h</p>
           </div>
