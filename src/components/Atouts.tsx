@@ -2,7 +2,7 @@
 const Atouts = () => {
   return (
     <section className="py-24 overflow-hidden bg-slate-700">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="flex flex-col md:items-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-center">
             Pourquoi choisir <br />{" "}
@@ -16,7 +16,7 @@ const Atouts = () => {
             l&apos;aventure de l&apos;auto-entrepreneuriat sans attendre.
           </p>
         </div>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 items-center">
+        <div className="grid items-center max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">
             <div className="lg:max-w-lg">
               <ul className="my-6 text-lg leading-8 text-white list-disc list-inside">
@@ -39,11 +39,6 @@ const Atouts = () => {
                   <span className="font-bold">Accès aux ressources :</span>{" "}
                   Profitez d&apos;un accès à une vaste gamme de ressources et de
                   guides pour vous aider à réussir.
-                </li>
-                <li>
-                  <span className="font-bold">Communauté :</span> Rejoignez une
-                  communauté d&apos;auto-entrepreneurs partageant les mêmes
-                  idées et échangez des conseils et des expériences.
                 </li>
               </ul>
               <p className="my-6 text-lg leading-8 text-white">
