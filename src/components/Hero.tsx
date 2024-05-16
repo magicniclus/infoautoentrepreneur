@@ -159,15 +159,17 @@ const Hero = () => {
               className="md:w-[80%] w-full py-8 bg-white md:bg-white/85 rounded-md px-5 md:px-8 flex-col items-center md:mt-0 mt-7 relative"
               onSubmit={handleSubmit}
             >
-              {buttonLoader && (
+              {/* {buttonLoader && (
                 <div className="absolute top-0 right-0 flex items-center justify-center w-full h-full bg-white/50">
-                  <img
-                    src="/loader/loader.gif"
-                    alt="loader"
-                    className="w-10 h-10"
-                  />
+                  <div className=" animate-pulse">
+                    <img
+                      src="/logo.png"
+                      alt="loader"
+                      className="w-10 h-10 opacity-60"
+                    />
+                  </div>
                 </div>
-              )}
+              )} */}
               <h2 className="w-9/12 mx-auto font-semibold text-center">
                 FORMULAIRE DE DÉCLARATION EN LIGNE SIMPLIFIÉ
               </h2>
