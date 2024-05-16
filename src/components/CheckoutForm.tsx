@@ -189,8 +189,8 @@ export default function CheckoutForm() {
         id="submit"
         className={`text-white w-full py-2 rounded-md mt-10 ${
           !stripe || !elements || !isPaymentReady
-            ? "bg-cyan-900/50"
-            : "bg-cyan-900 hover:bg-green-800"
+            ? "bg-green-700/50"
+            : "bg-green-700 hover:bg-green-700/80"
         } transition duration-150 ease-in-out`}
       >
         {isLoading ? "Loading..." : "DEVENIR AUTO-ENTREPRENEUR"}
