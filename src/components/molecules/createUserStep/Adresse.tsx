@@ -152,6 +152,7 @@ const Adresse = ({ data }: { data: any }) => {
           name="CGV"
           checked={formValues.CGV}
           onChange={handleCGVChange}
+          className="cursor-pointer h-4 w-4"
         />
         <label htmlFor="CGV" className="ml-3 text-xs font-light">
           J&apos;accepte les{" "}
