@@ -1,3 +1,4 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   ajoutUtilisateurCreation,
   ajoutUtilisateurEnCours,
@@ -11,7 +12,7 @@ import {
 import { StripePaymentElementChangeEvent } from "@stripe/stripe-js";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { app } from "../firebase/firebase.config";
 import { RootState } from "../redux/store";
@@ -26,6 +27,7 @@ export default function CheckoutForm() {
   const [message, setMessage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isPaymentReady, setIsPaymentReady] = useState<boolean>(false);
+  const [loading, setLoading] = useState(true);
 
   const userEmail = useSelector(
     (state: RootState) => state.createUser.userInfo.email
@@ -40,6 +42,15 @@ export default function CheckoutForm() {
   const userActivite = useSelector(
     (state: RootState) => state.createUser?.userActivite
   );
+
+  useEffect(() => {
+    if (!stripe || !elements) {
+      setLoading(true);
+      return;
+    } else {
+      setLoading(false);
+    }
+  }, [stripe, elements]);
 
   const handlePaymentElementChange = (
     event: StripePaymentElementChangeEvent
@@ -183,18 +194,27 @@ export default function CheckoutForm() {
 
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
-      <PaymentElement onChange={handlePaymentElementChange} />
-      <button
-        disabled={isLoading || !stripe || !elements || !isPaymentReady}
-        id="submit"
-        className={`text-white w-full py-2 rounded-md mt-10 ${
-          !stripe || !elements || !isPaymentReady
-            ? "bg-green-700/50"
-            : "bg-green-700 hover:bg-green-700/80"
-        } transition duration-150 ease-in-out`}
-      >
-        {isLoading ? "Loading..." : "DEVENIR AUTO-ENTREPRENEUR"}
-      </button>
+      {loading ? (
+        <div className="space-y-4">
+          <Skeleton className="w-full h-24" />
+          <Skeleton className="w-full h-10" />
+        </div>
+      ) : (
+        <>
+          <PaymentElement onChange={handlePaymentElementChange} />
+          <button
+            disabled={isLoading || !stripe || !elements || !isPaymentReady}
+            id="submit"
+            className={`text-white w-full py-2 rounded-md mt-10 ${
+              !stripe || !elements || !isPaymentReady
+                ? "bg-green-700/50"
+                : "bg-green-700 hover:bg-green-700/80"
+            } transition duration-150 ease-in-out`}
+          >
+            {isLoading ? "Loading..." : "DEVENIR AUTO-ENTREPRENEUR"}
+          </button>
+        </>
+      )}
       {message && <div>{message}</div>}
     </form>
   );
