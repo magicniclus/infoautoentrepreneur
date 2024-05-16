@@ -175,20 +175,20 @@ const Checkout = () => {
               />
             </div>
             {open && (
-              <div className="p-3 text-start w-[90%] mx-auto text-slate-400 text-sm p-2 bg-white mt-3 rounded-md">
-                <h3 className="">
+              <div className="p-3 text-start w-[90%] mx-auto text-slate-700 text-sm p-2 bg-white mt-3 rounded-md">
+                <h3 className="font-semibold">
                   Nom, prénom du demandant :{" "}
-                  <span className="font-semibold">
+                  <span className="font-normal">
                     {userNom.toUpperCase()} {userPrenom.toUpperCase()}
                   </span>
                 </h3>
-                <h3 className="mt-1.5">
+                <h3 className="mt-1.5 font-semibold">
                   Activité principale :{" "}
-                  <span className="font-semibold">{userActivite}</span>
+                  <span className="font-normal">{userActivite}</span>
                 </h3>
-                <h3 className="mt-1.5">
+                <h3 className="mt-1.5 font-semibold">
                   Date de début d&apos;activité :{" "}
-                  <span className="font-semibold">
+                  <span className="font-normal">
                     {formatDate(userDebutActivite)}
                   </span>
                 </h3>
