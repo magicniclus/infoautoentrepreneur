@@ -169,7 +169,7 @@ const page = () => {
               <p className="mt-3">
                 Pour exercer ces droits, veuillez contacter Nicolas Catera à
                 l&apos;adresse électronique suivante :
-                contact@info-autoentrepreneur.fr, accompagné d&apos;une copie
+                contact@info-autoentrepreneur.com, accompagné d&apos;une copie
                 d&apos;un titre d&apos;identité valide.
               </p>
               <p className="mt-3">
@@ -279,7 +279,7 @@ const page = () => {
               <p className="mt-3">
                 Pour toute question ou demande, les utilisateurs peuvent
                 contacter Nicolas Catera par email à
-                contact@info-autoentrepreneur.fr ou par courrier au 22 rue de
+                contact@info-autoentrepreneur.com ou par courrier au 22 rue de
                 Libourne, 33100 Bordeaux, France.
               </p>
             </div>
