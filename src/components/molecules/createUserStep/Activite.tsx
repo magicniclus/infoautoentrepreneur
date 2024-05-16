@@ -814,12 +814,12 @@ const Activite = ({ data }: { data: any }) => {
 
   return (
     <>
-      <div className="flex justify-between flex-col">
-        <div className="w-full flex flex-col">
-          <label htmlFor="debutActivite" className="text-slate-700 text-sm">
+      <div className="flex flex-col justify-between">
+        <div className="flex flex-col w-full">
+          <label htmlFor="debutActivite" className="text-slate-700 text-md">
             Date de début d&apos;activité
           </label>
-          <div className="w-full flex flex-col relative">
+          <div className="relative flex flex-col w-full">
             <CalendarIcon className="absolute top-3.5 right-3 text-slate-500 h-6 w-6 " />
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer
@@ -855,25 +855,25 @@ const Activite = ({ data }: { data: any }) => {
                 />
               </DemoContainer>
             </LocalizationProvider>
-            <p className="text-xs font-light w-10/12 mt-1">
+            <p className="w-10/12 mt-1 text-xs font-light">
               Entre le {minDate.format("DD/MM/YYYY")} et{" "}
               {maxDate.format("DD/MM/YYYY")}.
             </p>
           </div>
           {formErrors.debutActivite && (
-            <p className="text-red-500 text-xs mt-1">
+            <p className="mt-1 text-xs text-red-500">
               {formErrors.debutActivite}
             </p>
           )}
         </div>
-        <div className="w-full w-full mt-5">
-          <label htmlFor="activite" className="text-slate-700 text-sm">
+        <div className="w-full mt-5">
+          <label htmlFor="activite" className="text-slate-700 text-md">
             Domaine d&apos;activité
           </label>
           <select
             name="activite"
             id="activite"
-            className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2  hover:border-slate-500 focus:border-slate-500 text-sm"
+            className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
             value={formValues.activite}
             onChange={(event) =>
               setFormValues((prevState) => ({
@@ -896,24 +896,24 @@ const Activite = ({ data }: { data: any }) => {
               </option>
             ))}
           </select>
-          <p className="text-xs font-light w-10/12 mt-1">
+          <p className="w-10/12 mt-1 text-xs font-light">
             Sélectionnez l’option qui correspond le mieux à votre future
             activité.
           </p>
           {formErrors.activite && (
-            <p className="text-red-500 text-xs mt-1">{formErrors.activite}</p>
+            <p className="mt-1 text-xs text-red-500">{formErrors.activite}</p>
           )}
         </div>
         {formValues.activite &&
           formValues.activite !== "Je ne trouve pas mon domaine d’activité" && (
-            <div className="w-full w-full mt-5">
-              <label htmlFor="activite" className="text-slate-700 text-sm">
+            <div className="w-full mt-5">
+              <label htmlFor="activite" className="text-slate-700 text-md">
                 Activité principale
               </label>
               <select
                 name="activitePrincipale"
                 id="activitePrincipale"
-                className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2  hover:border-slate-500 focus:border-slate-500 text-sm"
+                className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
                 value={formValues.activitePrincipale}
                 onChange={(event) =>
                   setFormValues({
@@ -933,7 +933,7 @@ const Activite = ({ data }: { data: any }) => {
                   </option>
                 ))}
               </select>
-              <p className="text-xs font-light w-10/12 mt-1">
+              <p className="w-10/12 mt-1 text-xs font-light">
                 Choisissez l’activité principale que vous souhaitez exercer.
                 Celle-ci sera utilisée pour attribuer le code APE de votre
                 entreprise.
@@ -945,7 +945,7 @@ const Activite = ({ data }: { data: any }) => {
             "Je ne trouve pas mon activité...") && (
           <>
             <div className="w-full mt-5">
-              <label htmlFor="activite" className="text-slate-700 text-sm">
+              <label htmlFor="activite" className="text-slate-700 text-md">
                 Précisez votre domaine d&apos;activité
               </label>
               <input
@@ -960,22 +960,22 @@ const Activite = ({ data }: { data: any }) => {
                   })
                 }
                 placeholder="Domaine d’activité"
-                className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+                className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
               />
               {formErrors.activite && (
-                <p className="text-red-500 text-xs mt-1">
+                <p className="mt-1 text-xs text-red-500">
                   {formErrors.activite}
                 </p>
               )}
             </div>
             <div className="w-full mt-5">
-              <label htmlFor="activite" className="text-slate-700 text-sm">
+              <label htmlFor="activite" className="text-slate-700 text-md">
                 Catégorie d&apos;activité
               </label>
               <select
                 name="activitePrincipale"
                 id="activitePrincipale"
-                className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2  hover:border-slate-500 focus:border-slate-500 text-sm"
+                className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
                 value={formValues.categorie}
                 onChange={(event) =>
                   setFormValues({
@@ -995,8 +995,8 @@ const Activite = ({ data }: { data: any }) => {
             </div>
           </>
         )}
-        <div className="w-full mt-5 w-full">
-          <label htmlFor="nomCommercial" className="text-slate-700 text-sm">
+        <div className="w-full mt-5">
+          <label htmlFor="nomCommercial" className="text-slate-700 text-md">
             Nom commercial (facultatif)
           </label>
           <input
@@ -1008,24 +1008,24 @@ const Activite = ({ data }: { data: any }) => {
               setFormValues({ ...formValues, nomCommercial: e.target.value })
             }
             placeholder="Nom commercial de votre activité"
-            className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+            className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
           />
           {formErrors.nomCommercial && (
-            <p className="text-red-500 text-xs mt-1">
+            <p className="mt-1 text-xs text-red-500">
               {formErrors.nomCommercial}
             </p>
           )}
-          <p className="text-xs font-light w-10/12 mt-1">
+          <p className="w-10/12 mt-1 text-xs font-light">
             Le nom de votre micro-entreprise correspond obligatoirement à votre
             nom. Vous pouvez ajouter un nom commercial sous lequel votre
             activité sera connue du public.
           </p>
         </div>
-        <div className="w-full mt-5 flex justify-between flex-col">
-          <label htmlFor="nomCommercial" className="text-slate-700 text-sm">
+        <div className="flex flex-col justify-between w-full mt-5">
+          <label htmlFor="nomCommercial" className="text-slate-700 text-md">
             Avez-vous déjà exercé une activité non-salariée ?
           </label>
-          <div className="w-full flex justify-between md:flex-row flex-col">
+          <div className="flex flex-col justify-between w-full md:flex-row">
             <div
               className="flex mt-2 w-full md:w-[30%] flex-col items-end p-3 py-5 border hover:border-slate-500 focus:border-slate-500 rounded-md relative cursor-pointer"
               onClick={() =>
@@ -1047,12 +1047,12 @@ const Activite = ({ data }: { data: any }) => {
                   })
                 }
                 type="radio"
-                className="mr-2 h-5 w-5 cursor-pointer absolute top-2 right-2"
+                className="absolute w-5 h-5 mr-2 cursor-pointer top-2 right-2"
                 onClick={(e) => e.stopPropagation()} // Empêcher l'événement de se propager lors du clic direct sur l'input
               />
               <label
                 htmlFor="activiteNonSalarieNon"
-                className=" text-sm w-full mt-1"
+                className="w-full mt-1  text-md"
               >
                 Non
               </label>
@@ -1078,10 +1078,10 @@ const Activite = ({ data }: { data: any }) => {
                   })
                 }
                 type="radio"
-                className="mr-2 h-5 w-5 cursor-pointer absolute top-2 right-2"
+                className="absolute w-5 h-5 mr-2 cursor-pointer top-2 right-2"
                 onClick={(e) => e.stopPropagation()}
               />
-              <label htmlFor="activiteNonSalarieOui" className="text-sm">
+              <label htmlFor="activiteNonSalarieOui" className="text-md">
                 Oui,
                 <br />
                 <span className="text-xs">
@@ -1111,10 +1111,10 @@ const Activite = ({ data }: { data: any }) => {
                   })
                 }
                 type="radio"
-                className="mr-2 h-5 w-5 cursor-pointer absolute top-2 right-2"
+                className="absolute w-5 h-5 mr-2 cursor-pointer top-2 right-2"
                 onClick={(e) => e.stopPropagation()}
               />
-              <label htmlFor="activiteNonSalarieOuiSA" className="text-sm">
+              <label htmlFor="activiteNonSalarieOuiSA" className="text-md">
                 Oui,
                 <br />
                 <span className="text-xs">
