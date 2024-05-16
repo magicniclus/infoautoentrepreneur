@@ -12,7 +12,7 @@ const page = () => {
   return (
     <>
       <NavBarLanding />
-      <main className="min-h-[calc(100vh-100px)] md:bg-slate-50">
+      <main className="min-h-[calc(100vh-100px)] md:bg-slate-100">
         <Banner value="Formulaire de déclaration d'activité auto-entrepreneur" />
         <MobilStepManager />
         <div className="w-screen">
