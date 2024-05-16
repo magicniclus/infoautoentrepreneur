@@ -170,7 +170,7 @@ const Checkout = () => {
                 <h2 className="">
                   Paiement des frais à l’inscription au régime
                   d’auto-entrepreneur :{" "}
-                  <span className="font-bold text-slate-700">69,00 €</span>
+                  <span className="font-bold text-slate-700">49,00 €</span>
                 </h2>
                 <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
                 <div className=""></div>
