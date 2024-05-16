@@ -84,9 +84,9 @@ const Adresse = ({ data }: { data: any }) => {
   }, [formValues, dispatch]);
 
   return (
-    <div className="flex justify-between flex-col">
+    <div className="flex flex-col justify-between">
       <div className="w-full">
-        <label htmlFor="adresse" className="text-slate-700 text-sm">
+        <label htmlFor="adresse" className="text-slate-700 text-md">
           Adresse de votre domicile
         </label>
         <div>
@@ -97,15 +97,15 @@ const Adresse = ({ data }: { data: any }) => {
               value={input}
               onChange={handleInputChange}
               placeholder="Commencez à taper votre adresse"
-              className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm text-slate-700"
+              className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md text-slate-700"
             />
             {suggestions.length > 0 && (
-              <ul className="absolute bg-white w-full mt-1 max-h-60 overflow-auto border rounded-md shadow-lg text-sm text-slate-700">
+              <ul className="absolute w-full mt-1 overflow-auto bg-white border rounded-md shadow-lg max-h-60 text-md text-slate-700">
                 {suggestions.map((suggestion) => (
                   <li
                     key={suggestion.id}
                     onClick={() => handleSuggestionClick(suggestion)}
-                    className="cursor-pointer p-2 hover:bg-gray-100"
+                    className="p-2 cursor-pointer hover:bg-gray-100"
                   >
                     {suggestion.place_name}
                   </li>
@@ -115,14 +115,14 @@ const Adresse = ({ data }: { data: any }) => {
           </div>
         </div>
         {formErrors.adresse && (
-          <p className="text-red-500 text-xs mt-1">{formErrors.adresse}</p>
+          <p className="mt-1 text-xs text-red-500">{formErrors.adresse}</p>
         )}
-        <p className="text-xs font-light w-10/12 mt-1">
+        <p className="w-10/12 mt-1 text-xs font-light">
           L’adresse du domicile sera votre adresse pour toute correspondance.
         </p>
       </div>
-      <div className="w-full mt-5 w-full">
-        <label htmlFor="adresse" className="text-slate-700 text-sm">
+      <div className="w-full mt-5">
+        <label htmlFor="adresse" className="text-slate-700 text-md">
           Complément d&apos;adresse
         </label>
         <input
@@ -134,18 +134,18 @@ const Adresse = ({ data }: { data: any }) => {
             setFormValues({ ...formValues, complementAdresse: e.target.value })
           }
           placeholder="Complement d'adresse"
-          className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+          className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
         />
         {formErrors.complementAdresse && (
-          <p className="text-red-500 text-xs mt-1">
+          <p className="mt-1 text-xs text-red-500">
             {formErrors.complementAdresse}
           </p>
         )}
-        {/* <p className="text-xs font-light w-10/12 mt-1">
+        {/* <p className="w-10/12 mt-1 text-xs font-light">
           L’adresse du domicile sera votre adresse pour toute correspondance.
         </p> */}
       </div>
-      <div className="w-full mt-5 flex">
+      <div className="flex w-full mt-5">
         <input
           type="checkbox"
           id="CGV"
@@ -153,9 +153,9 @@ const Adresse = ({ data }: { data: any }) => {
           checked={formValues.CGV}
           onChange={handleCGVChange}
         />
-        <label htmlFor="CGV" className="text-xs font-light ml-3">
+        <label htmlFor="CGV" className="ml-3 text-xs font-light">
           J&apos;accepte les{" "}
-          <a href="#" className="text-slate-600 font-semibold">
+          <a href="#" className="font-semibold text-slate-600">
             conditions générales de vente
           </a>
         </label>
