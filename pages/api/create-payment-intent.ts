@@ -8,7 +8,7 @@ type Item = {
 
 const calculateOrderAmount = (items: Item[]): number => {
   // Remplacez cette constante par un calcul du montant de la commande
-  return 6900; // Montant exemple
+  return 4900; // Montant exemple
 };
 
 export default async function handler(
