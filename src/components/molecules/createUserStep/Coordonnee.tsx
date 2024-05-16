@@ -1,6 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { setUserInfo } from "@/redux/createUserSlice";
 import { nationnalite } from "@/utils/nationnalite";
 import { CalendarIcon } from "@heroicons/react/20/solid";
@@ -141,7 +148,7 @@ const Coordonnee = ({ data }: { data: any }) => {
     telephone: data.telephone || "",
     sexe: data.sexe || "",
     dateDeNaissance: data.dateDeNaissance || "",
-    nationnalite: data.nationnalite || "french",
+    nationnalite: data.nationnalite || "Française",
     departement: data.departement || "",
     paysDeNaissance: data.paysDeNaissance || "France",
     paysDeNaissanceEtranger: data.paysDeNaissanceEtranger || "",
@@ -227,9 +234,12 @@ const Coordonnee = ({ data }: { data: any }) => {
 
   // Fonction modifiée pour gérer les changements d'autres champs
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+      | { name: string; value: string }
   ) => {
-    const { name, value } = e.target;
+    const name = "name" in e ? e.name : e.target.name;
+    const value = "value" in e ? e.value : e.target.value;
     const newFormValues = { ...formValues, [name]: value };
     setFormValues(newFormValues);
     validateField(name, value);
@@ -531,28 +541,31 @@ const Coordonnee = ({ data }: { data: any }) => {
               <label htmlFor="departement" className="text-md text-slate-700">
                 Département de naissance
               </label>
-              <select
-                name="departement"
-                id="departement"
-                className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
+              <Select
+                onValueChange={(value) => {
+                  handleChange({
+                    target: { name: "departement", value },
+                  } as React.ChangeEvent<HTMLSelectElement>);
+                }}
                 value={formValues.departement}
-                onChange={handleChange}
               >
-                <option value="" disabled>
-                  Sélectionnez votre nouvelle activité
-                </option>
-                {departements.map((dep) => (
-                  <option key={dep} value={dep}>
-                    {dep}
-                  </option>
-                ))}
-              </select>
+                <SelectTrigger className="w-full px-2 py-2 mt-2 text-sm border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500">
+                  <SelectValue placeholder="Sélectionnez votre département de naissance" />
+                </SelectTrigger>
+                <SelectContent>
+                  {departements.map((dep) => (
+                    <SelectItem key={dep} value={dep}>
+                      {dep}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className="w-full mt-5">
               <label htmlFor="nationnalite" className="text-md text-slate-700">
                 Nationnalité
               </label>
-              <select
+              {/* <select
                 name="nationnalite"
                 id="nationnalite"
                 className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
@@ -567,15 +580,28 @@ const Coordonnee = ({ data }: { data: any }) => {
                     {n.label}
                   </option>
                 ))}
-              </select>
-              {/* <input
-                name="nationnalite"
-                onChange={handleChange}
-                value={formValues.nationnalite}
-                type="text"
-                placeholder="Nationnalité"
-                className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
-              /> */}
+              </select> */}
+              <Select
+                onValueChange={(value) => {
+                  handleChange({
+                    target: { name: "nationnalite", value },
+                  } as React.ChangeEvent<HTMLSelectElement>);
+                }}
+                value={formValues.nationnalite || "Française"}
+              >
+                <SelectTrigger className="w-full px-2 py-2 mt-2 text-sm border rounded-md border-slate-400 hover:border-slate-500 focus:border-blue-500">
+                  <SelectValue placeholder="Sélectionnez votre nationalité">
+                    {formValues.nationnalite || "Française"}
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent>
+                  {nationnalite.map((n) => (
+                    <SelectItem key={n.value} value={n.value}>
+                      {n.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               {formErrors.nationnalite && (
                 <p className="mt-1 text-xs text-red-500">
                   {formErrors.nationnalite}
