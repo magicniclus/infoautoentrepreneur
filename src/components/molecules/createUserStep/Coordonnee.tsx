@@ -288,10 +288,10 @@ const Coordonnee = ({ data }: { data: any }) => {
 
   return (
     <>
-      {/* <h2 className="font-semibold text-lg">Identité</h2> */}
-      <div className="flex justify-between md:flex-row flex-col">
+      {/* <h2 className="text-lg font-semibold">Identité</h2> */}
+      <div className="flex flex-col justify-between md:flex-row">
         <div className="w-full md:w-[48%]">
-          <label htmlFor="nom" className="text-slate-700 text-sm">
+          <label htmlFor="nom" className="text-md text-slate-700">
             Nom
           </label>
           <input
@@ -300,14 +300,14 @@ const Coordonnee = ({ data }: { data: any }) => {
             value={formValues.nom}
             type="text"
             placeholder="Votre nom"
-            className="w-full border hover:border-slate-500 focus:border-slate-500 px-2 py-2 rounded-md border-slate-400 mt-2 text-sm"
+            className="w-full px-2 py-2 mt-2 border rounded-md text-md hover:border-slate-500 focus:border-slate-500 border-slate-400"
           />
           {formErrors.nom && (
-            <p className="text-red-500 text-xs mt-1">{formErrors.nom}</p>
+            <p className="mt-1 text-xs text-red-500">{formErrors.nom}</p>
           )}
         </div>
         <div className="w-full md:w-[48%] md:mt-0 mt-5">
-          <label htmlFor="prenom" className="text-slate-700 text-sm">
+          <label htmlFor="prenom" className="text-md text-slate-700">
             Prénom
           </label>
           <input
@@ -316,16 +316,16 @@ const Coordonnee = ({ data }: { data: any }) => {
             value={formValues.prenom}
             type="text"
             placeholder="Votre prénom"
-            className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2  hover:border-slate-500 focus:border-slate-500 text-sm"
+            className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
           />
           {formErrors.prenom && (
-            <p className="text-red-500 text-xs mt-1">{formErrors.prenom}</p>
+            <p className="mt-1 text-xs text-red-500">{formErrors.prenom}</p>
           )}
         </div>
       </div>
       <div className="w-full mt-5">
-        <label className="text-slate-700 text-sm">Sexe</label>
-        <div className="w-full flex justify-between ">
+        <label className="text-md text-slate-700">Sexe</label>
+        <div className="flex justify-between w-full ">
           <div className="flex items-center mt-2 w-[47%]">
             <input
               id="homme"
@@ -334,9 +334,9 @@ const Coordonnee = ({ data }: { data: any }) => {
               checked={formValues.sexe === "Homme"}
               onChange={handleSexeChange}
               type="radio"
-              className="mr-2 h-5 w-5 cursor-pointer"
+              className="w-5 h-5 mr-2 cursor-pointer"
             />
-            <label htmlFor="homme" className="ml-3 text-sm">
+            <label htmlFor="homme" className="ml-3 text-md">
               Homme
             </label>
           </div>
@@ -348,17 +348,17 @@ const Coordonnee = ({ data }: { data: any }) => {
               checked={formValues.sexe === "Femme"}
               onChange={handleSexeChange}
               type="radio"
-              className="mr-2 h-5 w-5 cursor-pointer"
+              className="w-5 h-5 mr-2 cursor-pointer"
             />
-            <label htmlFor="femme" className="ml-3 text-sm">
+            <label htmlFor="femme" className="ml-3 text-md">
               Femme
             </label>
           </div>
         </div>
       </div>
-      <div className="flex justify-between md:flex-row flex-col mt-5">
+      <div className="flex flex-col justify-between mt-5 md:flex-row">
         <div className="w-full md:w-[48%]">
-          <label htmlFor="email" className="text-slate-700 text-sm">
+          <label htmlFor="email" className="text-md text-slate-700">
             Téléphone
           </label>
           <input
@@ -366,14 +366,14 @@ const Coordonnee = ({ data }: { data: any }) => {
             onChange={handleChange}
             type="email"
             placeholder="Votre téléphone"
-            className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2  hover:border-slate-500 focus:border-slate-500 text-sm"
+            className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
           />
           {formErrors.telephone && (
-            <p className="text-red-500 text-xs mt-1">{formErrors.telephone}</p>
+            <p className="mt-1 text-xs text-red-500">{formErrors.telephone}</p>
           )}
         </div>
         <div className="w-full md:w-[48%] mt-5 md:mt-0">
-          <label htmlFor="email" className="text-slate-700 text-sm">
+          <label htmlFor="email" className="text-md text-slate-700">
             Email
           </label>
           <input
@@ -382,15 +382,15 @@ const Coordonnee = ({ data }: { data: any }) => {
             value={formValues.email}
             type="email"
             placeholder="Votre email"
-            className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2  hover:border-slate-500 focus:border-slate-500 text-sm"
+            className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
           />
           {formErrors.email && (
-            <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>
+            <p className="mt-1 text-xs text-red-500">{formErrors.email}</p>
           )}
         </div>
       </div>
-      <div className="w-full flex flex-col mt-5">
-        <label htmlFor="dateDeNaissance" className="text-slate-700 text-sm">
+      <div className="flex flex-col w-full mt-5">
+        <label htmlFor="dateDeNaissance" className="text-md text-slate-700">
           Date de naissance
         </label>
         <div className="relative">
@@ -423,26 +423,26 @@ const Coordonnee = ({ data }: { data: any }) => {
           </LocalizationProvider>
         </div>
         {formErrors.dateDeNaissance && (
-          <p className="text-red-500 text-xs mt-1">
+          <p className="mt-1 text-xs text-red-500">
             {formErrors.dateDeNaissance}
           </p>
         )}
       </div>
-      <div className="w-full flex flex-col mt-5">
-        <label htmlFor="dateDeNaissance" className="text-slate-700 text-sm">
+      <div className="flex flex-col w-full mt-5">
+        <label htmlFor="dateDeNaissance" className="text-md text-slate-700">
           Pays de naissance
         </label>
-        <div className="w-full flex justify-between">
-          <div className="w-full flex justify-between">
+        <div className="flex justify-between w-full">
+          <div className="flex justify-between w-full">
             <div className="flex w-[48%] justify-start items-center mt-2">
               <input
                 type="radio"
                 value="France"
                 checked={formValues.paysDeNaissance === "France"}
                 onChange={handlePaysDeNaissanceChange}
-                className="border h-5 w-5 px-3 py-4 rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-sm cursor-pointer"
+                className="w-5 h-5 px-3 py-4 border rounded-md cursor-pointer text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
               />
-              <h3 className="ml-3 text-sm">France</h3>
+              <h3 className="ml-3 text-md">France</h3>
             </div>
             <div className="flex w-[48%] justify-start items-center">
               <input
@@ -450,19 +450,19 @@ const Coordonnee = ({ data }: { data: any }) => {
                 value="Etranger"
                 checked={formValues.paysDeNaissance === "Etranger"}
                 onChange={handlePaysDeNaissanceChange}
-                className="border h-5 w-5 px-3 py-4 rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-sm cursor-pointer"
+                className="w-5 h-5 px-3 py-4 border rounded-md cursor-pointer text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
               />
-              <h3 className="ml-3 text-sm">À l&apos;étranger</h3>
+              <h3 className="ml-3 text-md">À l&apos;étranger</h3>
             </div>
           </div>
         </div>
         {formValues.paysDeNaissance === "Etranger" ? (
           <>
-            <div className="flex md:flex-row flex-col justify-between">
+            <div className="flex flex-col justify-between md:flex-row">
               <div className="w-full mt-5 md:w-[47%] w-full">
                 <label
                   htmlFor="paysDeNaissance"
-                  className="text-slate-700 text-sm"
+                  className="text-md text-slate-700"
                 >
                   Pays de naissance
                 </label>
@@ -473,10 +473,10 @@ const Coordonnee = ({ data }: { data: any }) => {
                   value={formValues.paysDeNaissanceEtranger}
                   onChange={handleChange}
                   placeholder="Entrez le pays de naissance"
-                  className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+                  className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
                 />
                 {formErrors.paysDeNaissanceEtranger && (
-                  <p className="text-red-500 text-xs mt-1">
+                  <p className="mt-1 text-xs text-red-500">
                     {formErrors.paysDeNaissanceEtranger}
                   </p>
                 )}
@@ -484,7 +484,7 @@ const Coordonnee = ({ data }: { data: any }) => {
               <div className="w-full mt-5 md:w-[47%] w-full">
                 <label
                   htmlFor="villeDeNaissance"
-                  className="text-slate-700 text-sm"
+                  className="text-md text-slate-700"
                 >
                   Ville de naissance
                 </label>
@@ -493,11 +493,11 @@ const Coordonnee = ({ data }: { data: any }) => {
                   onChange={handleChange}
                   type="text"
                   placeholder="Votre ville de naissance"
-                  className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+                  className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
                   value={formValues.villeDeNaissance}
                 />
                 {formErrors.villeDeNaissance && (
-                  <p className="text-red-500 text-xs mt-1">
+                  <p className="mt-1 text-xs text-red-500">
                     {formErrors.villeDeNaissance}
                   </p>
                 )}
@@ -506,7 +506,7 @@ const Coordonnee = ({ data }: { data: any }) => {
             <div className="w-full mt-5">
               <label
                 htmlFor="villeDeNaissance"
-                className="text-slate-700 text-sm"
+                className="text-md text-slate-700"
               >
                 Nationnalité
               </label>
@@ -516,10 +516,10 @@ const Coordonnee = ({ data }: { data: any }) => {
                 value={formValues.nationnalite}
                 type="text"
                 placeholder="Nationnalité"
-                className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+                className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
               />
               {formErrors.nationnalite && (
-                <p className="text-red-500 text-xs mt-1">
+                <p className="mt-1 text-xs text-red-500">
                   {formErrors.nationnalite}
                 </p>
               )}
@@ -528,13 +528,13 @@ const Coordonnee = ({ data }: { data: any }) => {
         ) : (
           <>
             <div className="w-full mt-5">
-              <label htmlFor="departement" className="text-slate-700 text-sm">
+              <label htmlFor="departement" className="text-md text-slate-700">
                 Département de naissance
               </label>
               <select
                 name="departement"
                 id="departement"
-                className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+                className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
                 value={formValues.departement}
                 onChange={handleChange}
               >
@@ -549,13 +549,13 @@ const Coordonnee = ({ data }: { data: any }) => {
               </select>
             </div>
             <div className="w-full mt-5">
-              <label htmlFor="nationnalite" className="text-slate-700 text-sm">
+              <label htmlFor="nationnalite" className="text-md text-slate-700">
                 Nationnalité
               </label>
               <select
                 name="nationnalite"
                 id="nationnalite"
-                className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+                className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
                 value={formValues.nationnalite}
                 onChange={handleChange}
               >
@@ -574,10 +574,10 @@ const Coordonnee = ({ data }: { data: any }) => {
                 value={formValues.nationnalite}
                 type="text"
                 placeholder="Nationnalité"
-                className="w-full border px-2 py-2 rounded-md border-slate-400 mt-2 hover:border-slate-500 focus:border-slate-500 text-sm"
+                className="w-full px-2 py-2 mt-2 border rounded-md text-md border-slate-400 hover:border-slate-500 focus:border-slate-500"
               /> */}
               {formErrors.nationnalite && (
-                <p className="text-red-500 text-xs mt-1">
+                <p className="mt-1 text-xs text-red-500">
                   {formErrors.nationnalite}
                 </p>
               )}
