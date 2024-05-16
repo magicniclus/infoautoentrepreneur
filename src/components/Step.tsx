@@ -47,11 +47,7 @@ const Step = () => {
 
   const faqOne = () => {
     return (
-      <Accordion
-        type="single"
-        collapsible
-        className="w-full mt-10 text-slate-700"
-      >
+      <Accordion type="single" collapsible className="w-full text-slate-700">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-start text-sm">
             Pourquoi renseigner toutes ces informations ?
@@ -82,11 +78,7 @@ const Step = () => {
   };
   const faqTwo = () => {
     return (
-      <Accordion
-        type="single"
-        collapsible
-        className="w-full mt-10 text-slate-700"
-      >
+      <Accordion type="single" collapsible className="w-full text-slate-700">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-start text-sm">
             Quelle date choisir pour le début de mon activité ?
@@ -132,11 +124,7 @@ const Step = () => {
   };
   const faqThree = () => {
     return (
-      <Accordion
-        type="single"
-        collapsible
-        className="w-full mt-10 text-slate-700"
-      >
+      <Accordion type="single" collapsible className="w-full text-slate-700">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-start text-sm">
             Quel adresse je dois renseigner ?
@@ -180,86 +168,100 @@ const Step = () => {
 
   return (
     <section className="w-full text-slate-700 md:mt-0 mt-10">
-      <div className="w-full bg-slate-50 h-max rounded-md py-3 md:block hidden">
+      <div className="w-full bg-blue-50 h-max rounded-t-md py-3 md:block hidden">
         <div className="px-6 lg:px-8 flex flex-col justify-center items-center">
-          <h2 className="font-semibold text-sm text-cyan-900">
-            Numero de dossier
-          </h2>
+          <h2 className="font-bold text-sm">Numero de dossier</h2>
           <h3 className="text-sm">{userInfo.dossierId.toLocaleUpperCase()}</h3>
         </div>
       </div>
-      <div className="px-6 lg:px-8  md:flex hidden flex-col justify-center items-start w-full flex flex-col mt-7">
+      <div className="px-6 lg:px-8  md:flex hidden flex-col justify-center items-start w-full flex flex-col mt-7 relative">
         <div
-          className={`flex items-center ${
+          className={`${
+            step === 1
+              ? ""
+              : step === 2
+              ? "h-[40px]"
+              : step === 3
+              ? "h-[85px]"
+              : "h-[130px]"
+          }  bg-green-700 w-[2.5px] absolute left-[42px] top-3 -z-10 transition-all duration-300 ease-in-out`}
+        />
+        <div
+          className={`flex items-center z-10 ${
             step < 2
               ? "font-bold text-slate-400 border-slate-400"
-              : " text-cyan-900  border-cyan-900 font-bold"
+              : " text-green-700  border-green-700 font-bold"
           }`}
         >
           <div
-            className={`w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border`}
+            className={`w-6 h-6 flex justify-center items-center bg-slate-50 rounded-full border ${
+              step > 1 && "border-green-700"
+            }`}
           >
-            {step > 1 ? <CheckIcon className="h-3 w-3" /> : null}
+            {step > 1 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Déclarant</p>
         </div>
         <div
-          className={`flex items-center mt-5 ${
+          className={`flex items-center mt-5 z-10 ${
             step === 2 || step < 3
               ? `${
                   step === 2 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-cyan-900  border-cyan-900 font-bold"
+              : " text-green-700  border-green-700 font-bold"
           }`}
         >
-          <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">
-            {step > 2 ? <CheckIcon className="h-3 w-3" /> : null}
+          <div
+            className={`w-6 h-6 flex justify-center items-center bg-slate-50 rounded-full border ${
+              step > 2 && "border-green-700"
+            }`}
+          >
+            {step > 2 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Activité</p>
         </div>
         <div
-          className={`flex items-center mt-5 ${
+          className={`flex items-center mt-5 z-10 ${
             step === 3 || step < 4
               ? `${
                   step === 3 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-cyan-900  border-cyan-900 font-bold"
+              : " text-green-700  border-green-700 font-bold"
           }`}
         >
-          <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">
-            {step > 3 ? <CheckIcon className="h-3 w-3" /> : null}
+          <div
+            className={`w-6 h-6 flex justify-center items-center bg-slate-50 rounded-full border ${
+              step > 3 && "border-green-700"
+            }`}
+          >
+            {step > 3 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Adresse</p>
         </div>
         <div
-          className={`flex items-center mt-5 ${
+          className={`flex items-center mt-5 z-10 ${
             step === 4 || step < 5
               ? `${
                   step === 4 ? "font-bold text-slate-400" : "text-slate-300"
                 } border-slate-300`
-              : " text-cyan-900  border-cyan-900 font-bold"
+              : " text-green-700  border-green-700 font-bold"
           }`}
         >
-          <div className="w-4 h-4 flex justify-center items-center bg-slate-50 rounded-full border">
-            {step > 4 ? <CheckIcon className="h-3 w-3" /> : null}
+          <div
+            className={`w-6 h-6 flex justify-center items-center bg-slate-50 rounded-full border ${
+              step > 4 && "border-green-700"
+            }`}
+          >
+            {step > 4 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Finalisation</p>
         </div>
       </div>
-      <div className="px-6 lg:px-8">{faqMananger()}</div>
-      <div className="w-full bg-slate-50 h-max rounded-md py-3 mt-10">
-        <div className="px-6 lg:px-8 flex flex-col">
-          <h2 className="text-sm">
-            <span className="text-cyan-900 font-semibold">
-              +1 051 000 <br />
-            </span>{" "}
-            auto-entreprises créées en 2023
-          </h2>
-        </div>
+      <div className="w-full bg-blue-50 h-max px-6 lg:px-8 rounded-t-md py-5 mt-10 flex justify-center">
+        <h2 className="text-sm font-bold">Assistance</h2>
       </div>
-      <div className="w-full bg-slate-50 h-max px-6 lg:px-8 rounded-md py-5 mt-5">
-        <h2 className="text-sm">Une question ?</h2>
-        <div className="flex relative lign items-center mt-5">
+      <div className="w-full h-max px-6 lg:px-8 rounded-md py-5 md:bg-white bg-slate-50">
+        <div className="flex relative lign items-center">
           <PhoneIcon className="h-4 w-4 mr-4" />
           <div className="flex flex-col justify-between">
             <a href="tel:0917164963" className="font-semibold text-sm">
@@ -279,6 +281,26 @@ const Step = () => {
             </a>
             <p className="text-xs">Du lundi au vendredi - de 9h à 19h</p>
           </div>
+        </div>
+      </div>
+      <div
+        className={`w-full bg-blue-50 h-max rounded-t-md py-3 mt-10 justify-center ${
+          step === 4 ? "hidden" : "flex"
+        }`}
+      >
+        <div className="px-6 lg:px-8 flex flex-col">
+          <h2 className="text-sm font-bold">Vos questions</h2>
+        </div>
+      </div>
+      <div className="px-6 lg:px-8">{faqMananger()}</div>
+      <div className="w-full h-max rounded-md py-3 mt-10">
+        <div className="px-6 lg:px-8 flex flex-col">
+          <h2 className="text-sm">
+            <span className="text-slate-700 text-md font-semibold">
+              +1 051 000 <br />
+            </span>{" "}
+            auto-entreprises créées en 2023
+          </h2>
         </div>
       </div>
     </section>
