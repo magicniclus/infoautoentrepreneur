@@ -11,7 +11,7 @@ const Atouts = () => {
           <p className="my-6 text-lg leading-8 text-white">
             Avec Info Auto-Entrepreneur, lancer votre auto-entreprise en ligne
             devient un jeu d&apos;enfant. Rejoignez le régime de la
-            micro-entreprise en tout juste 15 minutes et embarquez dans
+            micro-entreprise en tout juste 3 minutes et embarquez dans
             l&apos;aventure de l&apos;auto-entrepreneuriat sans attendre.
           </p>
         </div>
