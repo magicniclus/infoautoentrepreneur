@@ -7,7 +7,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateField } from "@mui/x-date-pickers/DateField";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
@@ -81,28 +81,31 @@ const CoordonneeModification = ({ data }: { data: any }) => {
     dispatch(setModificationDetails(updatedFormValues)); // Assurez-vous également de mettre à jour le store Redux
   };
 
-  const handleDateChange = (newValue: string) => {
-    const today = dayjs();
-    const birthdate = dayjs(newValue);
-    const age = today.diff(birthdate, "year");
+  const handleDateChange = (newValue: Dayjs | null) => {
+    if (newValue) {
+      const today = dayjs();
+      const birthdate = newValue;
+      const age = today.diff(birthdate, "year");
 
-    if (age < 18) {
-      setFormErrors((prevErrors) => ({
-        ...prevErrors,
-        dateDeNaissance: "Vous devez avoir au moins 18 ans.",
-      }));
-      // Dispatch avec dateDeNaissance vide si l'utilisateur a moins de 18 ans
-      const updatedFormValues = { ...formValues, dateDeNaissance: "" };
-      setFormValues(updatedFormValues);
-      dispatch(setModificationDetails(updatedFormValues));
-    } else {
-      setFormErrors((prevErrors) => ({
-        ...prevErrors,
-        dateDeNaissance: "",
-      }));
-      const updatedFormValues = { ...formValues, dateDeNaissance: newValue };
-      setFormValues(updatedFormValues);
-      dispatch(setModificationDetails(updatedFormValues));
+      if (age < 18) {
+        setFormErrors((prevErrors) => ({
+          ...prevErrors,
+          dateDeNaissance: "Vous devez avoir au moins 18 ans.",
+        }));
+        setFormValues((prevValues) => ({
+          ...prevValues,
+          dateDeNaissance: "",
+        }));
+      } else {
+        setFormErrors((prevErrors) => ({
+          ...prevErrors,
+          dateDeNaissance: "",
+        }));
+        setFormValues((prevValues) => ({
+          ...prevValues,
+          dateDeNaissance: newValue.format("YYYY-MM-DD"),
+        }));
+      }
     }
   };
 
@@ -271,9 +274,9 @@ const CoordonneeModification = ({ data }: { data: any }) => {
           <CalendarIcon className="absolute top-3.5 right-3 text-slate-500 h-6 w-6 " />
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={["DateField", "DateField", "DateField"]}>
-              <DateField // Convertissez la chaîne en objet dayjs ici
-                onChange={(newValue: string | null) =>
-                  handleDateChange(newValue as string)
+              <DateField
+                onChange={(newValue: Dayjs | null) =>
+                  handleDateChange(newValue)
                 }
                 format="DD/MM/YYYY"
                 sx={{
