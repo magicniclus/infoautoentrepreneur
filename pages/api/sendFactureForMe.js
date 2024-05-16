@@ -15,8 +15,8 @@ export default async (req, res) => {
     );
 
     const msg = {
-      to: "contact@info-autoentrepreneur.fr", // Assurez-vous que cette adresse est valide
-      from: "contact@info-autoentrepreneur.fr",
+      to: "contact@info-autoentrepreneur.com", // Assurez-vous que cette adresse est valide
+      from: "contact@info-autoentrepreneur.com",
       subject: "Nouvelle facture client",
       html: emailContent,
     };
