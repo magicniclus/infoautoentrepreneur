@@ -6,7 +6,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateField } from "@mui/x-date-pickers/DateField";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -852,25 +852,39 @@ const AdresseModification = ({
     // Vous pouvez continuer à ajouter des validations pour les autres champs selon vos besoins
   };
 
-  const handleDateChange = (newValue: string) => {
-    const today = dayjs().startOf("day");
-    const selectedDate = dayjs(newValue);
+  const handleDateChange = (newValue: Dayjs | null) => {
+    if (newValue) {
+      const today = dayjs().startOf("day");
+      const selectedDate = dayjs(newValue);
 
-    if (selectedDate.isBefore(today)) {
-      setFormErrors((prevErrors) => ({
-        ...prevErrors,
-        dateDeChangement:
-          "La date choisie doit être supérieure à la date du jour.",
-      }));
-      const updatedFormValues = { ...formValues, dateDeChangement: "" };
-      setFormValues(updatedFormValues);
+      if (selectedDate.isBefore(today)) {
+        setFormErrors((prevErrors) => ({
+          ...prevErrors,
+          dateDeChangement:
+            "La date choisie doit être supérieure à la date du jour.",
+        }));
+        const updatedFormValues = { ...formValues, dateDeChangement: "" };
+        setFormValues(updatedFormValues);
+      } else {
+        setFormErrors((prevErrors) => ({
+          ...prevErrors,
+          dateDeChangement: "",
+        }));
+        const updatedFormValues = {
+          ...formValues,
+          dateDeChangement: newValue.format("YYYY-MM-DD"),
+        };
+        setFormValues(updatedFormValues);
+      }
     } else {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
+        dateDeChangement: "La date est requise.",
+      }));
+      setFormValues((prevValues) => ({
+        ...prevValues,
         dateDeChangement: "",
       }));
-      const updatedFormValues = { ...formValues, dateDeChangement: newValue };
-      setFormValues(updatedFormValues);
     }
   };
 
@@ -1115,9 +1129,7 @@ const AdresseModification = ({
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={["DateField", "DateField", "DateField"]}>
               <DateField
-                onChange={(newValue: string | null) =>
-                  handleDateChange(newValue as string)
-                }
+                onChange={(newValue) => handleDateChange(newValue)}
                 format="DD/MM/YYYY"
                 sx={{
                   "& .MuiInputBase-input, & .MuiOutlinedInput-input": {
