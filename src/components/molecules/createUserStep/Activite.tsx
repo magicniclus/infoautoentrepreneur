@@ -11,6 +11,14 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 const objectActivites = {
   "Achat-Revente": [
     "Achat-Vente d'accessoires de mode",
@@ -870,32 +878,30 @@ const Activite = ({ data }: { data: any }) => {
           <label htmlFor="activite" className="text-slate-700 text-md">
             Domaine d&apos;activité
           </label>
-          <select
-            name="activite"
-            id="activite"
-            className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
-            value={formValues.activite}
-            onChange={(event) =>
+          <Select
+            onValueChange={(value) => {
               setFormValues((prevState) => ({
                 ...prevState,
-                activite: event.target.value,
+                activite: value,
                 activitePrincipale:
-                  event.target.value !==
-                  "Je ne trouve pas mon domaine d’activité"
+                  value !== "Je ne trouve pas mon domaine d’activité"
                     ? prevState.activitePrincipale
                     : "",
-              }))
-            }
+              }));
+            }}
+            value={formValues.activite}
           >
-            <option value="" disabled>
-              Sélectionnez votre nouvelle activité
-            </option>
-            {Object.keys(objectActivites).map((activite) => (
-              <option key={activite} value={activite}>
-                {activite}
-              </option>
-            ))}
-          </select>
+            <SelectTrigger className="w-full px-2 py-2 mt-2 text-sm border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500">
+              <SelectValue placeholder="Sélectionnez votre nouvelle activité" />
+            </SelectTrigger>
+            <SelectContent>
+              {Object.keys(objectActivites).map((activite) => (
+                <SelectItem key={activite} value={activite}>
+                  {activite}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
           <p className="w-10/12 mt-1 text-xs font-light">
             Sélectionnez l’option qui correspond le mieux à votre future
             activité.
@@ -907,32 +913,34 @@ const Activite = ({ data }: { data: any }) => {
         {formValues.activite &&
           formValues.activite !== "Je ne trouve pas mon domaine d’activité" && (
             <div className="w-full mt-5">
-              <label htmlFor="activite" className="text-slate-700 text-md">
-                Activité principale
-              </label>
-              <select
-                name="activitePrincipale"
-                id="activitePrincipale"
-                className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
-                value={formValues.activitePrincipale}
-                onChange={(event) =>
-                  setFormValues({
-                    ...formValues,
-                    activitePrincipale: event.target.value,
-                  })
-                }
+              <label
+                htmlFor="activitePrincipale"
+                className="text-slate-700 text-md"
               >
-                <option value="" disabled>
-                  Sélectionnez votre nouvelle activité
-                </option>
-                {objectActivites[
-                  formValues.activite as keyof typeof objectActivites
-                ]?.map((activite) => (
-                  <option key={activite.toString()} value={activite}>
-                    {activite}
-                  </option>
-                ))}
-              </select>
+                Activité Principale
+              </label>
+              <Select
+                onValueChange={(value) => {
+                  setFormValues((prevState) => ({
+                    ...prevState,
+                    activitePrincipale: value,
+                  }));
+                }}
+                value={formValues.activitePrincipale}
+              >
+                <SelectTrigger className="w-full px-2 py-2 mt-2 text-sm border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500">
+                  <SelectValue placeholder="Sélectionnez votre nouvelle activité" />
+                </SelectTrigger>
+                <SelectContent>
+                  {objectActivites[
+                    formValues.activite as keyof typeof objectActivites
+                  ]?.map((activite) => (
+                    <SelectItem key={activite.toString()} value={activite}>
+                      {activite}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <p className="w-10/12 mt-1 text-xs font-light">
                 Choisissez l’activité principale que vous souhaitez exercer.
                 Celle-ci sera utilisée pour attribuer le code APE de votre
@@ -972,26 +980,27 @@ const Activite = ({ data }: { data: any }) => {
               <label htmlFor="activite" className="text-slate-700 text-md">
                 Catégorie d&apos;activité
               </label>
-              <select
-                name="activitePrincipale"
-                id="activitePrincipale"
-                className="w-full px-2 py-2 mt-2 border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500 text-md"
+              <Select
+                onValueChange={(value) => {
+                  setFormValues((prevState) => ({
+                    ...prevState,
+                    categorie: value,
+                  }));
+                }}
                 value={formValues.categorie}
-                onChange={(event) =>
-                  setFormValues({
-                    ...formValues,
-                    categorie: event.target.value,
-                  })
-                }
               >
-                <option value="" disabled>
-                  Sélectionnez votre nouvelle activité
-                </option>
-                <option value="commerciale">Commerciale</option>
-                <option value="agentCommercial">Agent Commercial</option>
-                <option value="artisanale">Artisanale</option>
-                <option value="libérale">Libérale</option>
-              </select>
+                <SelectTrigger className="w-full px-2 py-2 mt-2 text-sm border rounded-md border-slate-400 hover:border-slate-500 focus:border-slate-500">
+                  <SelectValue placeholder="Sélectionnez votre nouvelle activité" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="commerciale">Commerciale</SelectItem>
+                  <SelectItem value="agentCommercial">
+                    Agent Commercial
+                  </SelectItem>
+                  <SelectItem value="artisanale">Artisanale</SelectItem>
+                  <SelectItem value="libérale">Libérale</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           </>
         )}
@@ -1052,7 +1061,7 @@ const Activite = ({ data }: { data: any }) => {
               />
               <label
                 htmlFor="activiteNonSalarieNon"
-                className="w-full mt-1  text-md"
+                className="w-full mt-1 text-md"
               >
                 Non
               </label>
