@@ -4,7 +4,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateField } from "@mui/x-date-pickers/DateField";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -118,7 +118,8 @@ const AdresseCessation = ({
     }
   };
 
-  const handleDateChange = (newValue: string) => {
+const handleDateChange = (newValue: Dayjs | null) => {
+  if (newValue) {
     const today = dayjs().startOf("day");
     const selectedDate = dayjs(newValue);
 
@@ -135,10 +136,24 @@ const AdresseCessation = ({
         ...prevErrors,
         dateDeCessation: "",
       }));
-      const updatedFormValues = { ...formValues, dateDeCessation: newValue };
+      const updatedFormValues = {
+        ...formValues,
+        dateDeCessation: newValue.format("YYYY-MM-DD"),
+      };
       setFormValues(updatedFormValues);
     }
-  };
+  } else {
+    // Gérer le cas où newValue est null
+    setFormErrors((prevErrors) => ({
+      ...prevErrors,
+      dateDeCessation: "La date est requise.",
+    }));
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      dateDeCessation: "",
+    }));
+  }
+};
 
   useEffect(() => {
     dispatch(setCessationDetails(formValues));
@@ -232,8 +247,8 @@ const AdresseCessation = ({
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={["DateField", "DateField", "DateField"]}>
               <DateField
-                onChange={(newValue: string | null) =>
-                  handleDateChange(newValue as string)
+                onChange={(newValue: Dayjs | null) =>
+                  handleDateChange(newValue as Dayjs | null)
                 }
                 format="DD/MM/YYYY"
                 sx={{
