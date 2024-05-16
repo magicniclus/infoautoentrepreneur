@@ -184,7 +184,7 @@ const Step = () => {
               : step === 3
               ? "h-[85px]"
               : "h-[130px]"
-          }  bg-green-700 w-[2.5px] absolute left-[42px] top-3 -z-10 transition-all duration-300 ease-in-out`}
+          }  bg-green-700 w-[2.5px] absolute left-[42px] top-3 -z-10 transition-all lg:block hidden duration-300 ease-in-out`}
         />
         <div
           className={`flex items-center z-10 ${
@@ -260,7 +260,7 @@ const Step = () => {
       <div className="w-full bg-blue-50 h-max px-6 lg:px-8 rounded-t-md py-5 mt-10 flex justify-center">
         <h2 className="text-sm font-bold">Assistance</h2>
       </div>
-      <div className="w-full h-max px-6 lg:px-8 rounded-md py-5 md:bg-white bg-slate-50">
+      <div className="w-full h-max px-6 lg:px-8 md:rounded-md rounded-b-md py-5 md:bg-white bg-slate-50">
         <div className="flex relative lign items-center">
           <PhoneIcon className="h-4 w-4 mr-4" />
           <div className="flex flex-col justify-between">
