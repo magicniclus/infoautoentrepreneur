@@ -21,7 +21,7 @@ const Atouts = () => {
               <ul className="my-6 text-lg leading-8 text-white list-inside">
                 <li className="mt-2">
                   <span className="font-bold">1-Inscription rapide :</span> En
-                  seulement 15 minutes, vous pouvez compléter votre inscription
+                  seulement 3 minutes, vous pouvez compléter votre inscription
                   et commencer votre activité.
                 </li>
                 <li className="mt-2">
