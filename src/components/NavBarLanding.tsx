@@ -59,10 +59,10 @@ const NavBarLanding = ({ dossier = true }: { dossier?: boolean }) => {
             <div className=" md:flex hidden items-center justify-center relative">
               <EnvelopeIcon className="h-6 w-6 text-slate-700 mr-3" />
               <a
-                href="mailto:contact@info-autoentrepreneur.fr"
+                href="mailto:contact@info-autoentrepreneur.com"
                 className="font-semibold text-xs md:text-sm text-slate-700"
               >
-                contact@info-autoentrepreneur.fr
+                contact@info-autoentrepreneur.com
               </a>
             </div>
           </div>
