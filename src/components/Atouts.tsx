@@ -52,7 +52,7 @@ const Atouts = () => {
             <div className="rounded-lg overflow-hidden w-full md:mx-0 mx-auto">
               <iframe
                 width={"100%"}
-                height={"320"}
+                height={"280"}
                 src="https://www.youtube.com/embed/A0EdYBP1qw0?si=MiXofxndA8TpEIE8"
                 title="YouTube video player"
                 frameborder="0"
