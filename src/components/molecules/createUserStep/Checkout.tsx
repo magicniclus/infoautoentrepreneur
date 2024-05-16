@@ -5,6 +5,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
+import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronDownIcon, LockClosedIcon } from "@heroicons/react/20/solid";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
@@ -35,6 +36,7 @@ const Checkout = () => {
   );
 
   const [clientSecret, setClientSecret] = React.useState("");
+  const [loading, setLoading] = useState(true);
 
   const [open, setOpen] = useState(false);
 
@@ -97,8 +99,14 @@ const Checkout = () => {
         }
         return res.json();
       })
-      .then((data) => setClientSecret(data.clientSecret))
-      .catch((error) => console.error("Error creating payment intent:", error));
+      .then((data) => {
+        setClientSecret(data.clientSecret);
+        setLoading(false); // Arrêtez le chargement une fois que les données sont prêtes
+      })
+      .catch((error) => {
+        console.error("Error creating payment intent:", error);
+        setLoading(false); // Arrêtez le chargement même en cas d'erreur
+      });
   }, [userEmail, userPrenom, userNom, userAdresse]);
 
   const formatDate = (dateString: string) => {
@@ -140,86 +148,96 @@ const Checkout = () => {
         }
       `}</style>
       <div className="App">
-        <div className="w-full md:px-0">
-          <div className="mb-7 text-center  bg-[url('/background/paper3.png')] bg-top text-slate-700 rounded-md py-4 px-2">
-            <div className="flex items-center text-xs w-[90%] mx-auto mb-7">
-              <CheckCircle className="w-4 h-4 mr-2 text-cyan-900" />
-              <h3 className="text-start">
-                Dossier enregistré{" "}
-                <span className="font-semibold">
-                  le {dateActuelle} à {heureActuelle}
-                </span>
-              </h3>
+        {loading ? (
+          <div className="space-y-4">
+            <Skeleton className="w-full h-16" />
+            <Skeleton className="w-full h-24" />
+            <Skeleton className="w-full h-10" />
+          </div>
+        ) : (
+          <>
+            <div className="w-full md:px-0">
+              <div className="mb-7 text-center bg-[url('/background/paper3.png')] bg-top text-slate-700 rounded-md py-4 px-2">
+                <div className="flex items-center text-xs w-[90%] mx-auto mb-7">
+                  <CheckCircle className="w-4 h-4 mr-2 text-cyan-900" />
+                  <h3 className="text-start">
+                    Dossier enregistré{" "}
+                    <span className="font-semibold">
+                      le {dateActuelle} à {heureActuelle}
+                    </span>
+                  </h3>
+                </div>
+                <h2 className="">
+                  Paiement des frais à l’inscription au régime
+                  d’auto-entrepreneur :{" "}
+                  <span className="font-bold text-slate-700">59,00 €</span>
+                </h2>
+                <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
+                <div className=""></div>
+                <div
+                  className="mt-3 w-[90%] text-slate-400 mx-auto flex justify-between items-center cursor-pointer"
+                  onClick={(e) => setOpen((e) => !e)}
+                >
+                  <h3 className="flex items-center text-sm">
+                    <span className="flex items-center justify-center w-5 h-5 mr-2 border rounded-full border-slate-300">
+                      ?
+                    </span>
+                    Voir mes informations
+                  </h3>
+                  <ChevronDownIcon
+                    className={`h-5 w-5 transition-all duration-150 easeInOut ${
+                      open ? "transform rotate-180" : ""
+                    }`}
+                  />
+                </div>
+                {open && (
+                  <div className="p-3 text-start w-[90%] mx-auto text-slate-700 text-sm p-2 bg-white mt-3 rounded-md">
+                    <h3 className="font-semibold">
+                      Nom, prénom du demandeur :{" "}
+                      <span className="font-normal">
+                        {userNom.toUpperCase()} {userPrenom.toUpperCase()}
+                      </span>
+                    </h3>
+                    <h3 className="mt-1.5 font-semibold">
+                      Activité principale :{" "}
+                      <span className="font-normal">{userActivite}</span>
+                    </h3>
+                    <h3 className="mt-1.5 font-semibold">
+                      Date de début d&apos;activité :{" "}
+                      <span className="font-normal">
+                        {formatDate(userDebutActivite)}
+                      </span>
+                    </h3>
+                  </div>
+                )}
+              </div>
             </div>
-            <h2 className="">
-              {" "}
-              Paiement des frais à l’inscription au régime d’auto-entrepreneur :{" "}
-              <span className="font-bold text-slate-700">59,00 €</span>
-            </h2>
-            <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
-            <div className=""></div>
-            <div
-              className="mt-3 w-[90%] text-slate-400 mx-auto flex justify-between items-center cursor-pointer"
-              onClick={(e) => setOpen((e) => !e)}
-            >
-              <h3 className="flex items-center text-sm">
-                <span className="flex items-center justify-center w-5 h-5 mr-2 border rounded-full border-slate-300">
-                  ?
-                </span>
-                Voir mes informations
-              </h3>
-              <ChevronDownIcon
-                className={`h-5 w-5 transition-all duration-150 easeInOut ${
-                  open ? "transform rotate-180" : ""
-                }`}
+
+            <div className="flex justify-between mb-7 md:px-0 md:mt-0">
+              <div className="flex items-center">
+                <LockClosedIcon className="w-5 h-5 text-yellow-500" />
+                <p className="ml-2 text-slate-700">Paiement sécurisé SSL</p>
+              </div>
+              <Image
+                src="/icons/payment.svg"
+                width={100}
+                height={20}
+                alt="Carte bancaire"
+                className="hidden md:block"
               />
             </div>
-            {open && (
-              <div className="p-3 text-start w-[90%] mx-auto text-slate-700 text-sm p-2 bg-white mt-3 rounded-md">
-                <h3 className="font-semibold">
-                  Nom, prénom du demandant :{" "}
-                  <span className="font-normal">
-                    {userNom.toUpperCase()} {userPrenom.toUpperCase()}
-                  </span>
-                </h3>
-                <h3 className="mt-1.5 font-semibold">
-                  Activité principale :{" "}
-                  <span className="font-normal">{userActivite}</span>
-                </h3>
-                <h3 className="mt-1.5 font-semibold">
-                  Date de début d&apos;activité :{" "}
-                  <span className="font-normal">
-                    {formatDate(userDebutActivite)}
-                  </span>
-                </h3>
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div className="flex justify-between mb-7 md:px-0 md:mt-0">
-          <div className="flex items-center">
-            <LockClosedIcon className="w-5 h-5 text-yellow-500" />
-            <p className="ml-2 text-slate-700">Paiement sécurisé SSL</p>
-          </div>
-          <Image
-            src="/icons/payment.svg"
-            width={100}
-            height={20}
-            alt="Carte bancaire"
-            className="hidden md:block"
-          />
-        </div>
-        <div className="">
-          {clientSecret && (
-            <Elements
-              options={{ ...options, locale: "fr-FR" }}
-              stripe={stripePromise}
-            >
-              <CheckoutForm />
-            </Elements>
-          )}
-        </div>
+            <div className="">
+              {clientSecret && (
+                <Elements
+                  options={{ ...options, locale: "fr-FR" }}
+                  stripe={stripePromise}
+                >
+                  <CheckoutForm />
+                </Elements>
+              )}
+            </div>
+          </>
+        )}
       </div>
     </>
   );
