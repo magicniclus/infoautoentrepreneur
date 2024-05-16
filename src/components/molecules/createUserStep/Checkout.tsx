@@ -143,7 +143,7 @@ const Checkout = () => {
         <div className="w-full md:px-0">
           <div className="mb-7 text-center  bg-[url('/background/paper3.png')] bg-top text-slate-700 rounded-md py-4 px-2">
             <div className="flex items-center text-xs w-[90%] mx-auto mb-7">
-              <CheckCircle className="h-4 w-4 text-cyan-900 mr-2" />
+              <CheckCircle className="w-4 h-4 mr-2 text-cyan-900" />
               <h3 className="text-start">
                 Dossier enregistré{" "}
                 <span className="font-semibold">
@@ -154,7 +154,7 @@ const Checkout = () => {
             <h2 className="">
               {" "}
               Paiement des frais à l’inscription au régime d’auto-entrepreneur :{" "}
-              <span className="font-bold text-cyan-700">59,00 €</span>
+              <span className="font-bold text-slate-700">59,00 €</span>
             </h2>
             <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
             <div className=""></div>
@@ -163,7 +163,7 @@ const Checkout = () => {
               onClick={(e) => setOpen((e) => !e)}
             >
               <h3 className="flex items-center text-sm">
-                <span className="w-5 h-5 flex justify-center items-center rounded-full border border-slate-300 mr-2 items-center">
+                <span className="flex items-center justify-center w-5 h-5 mr-2 border rounded-full border-slate-300">
                   ?
                 </span>
                 Voir mes informations
@@ -199,15 +199,15 @@ const Checkout = () => {
 
         <div className="flex justify-between mb-7 md:px-0 md:mt-0">
           <div className="flex items-center">
-            <LockClosedIcon className="h-5 w-5 text-yellow-500" />
-            <p className="text-slate-700 ml-2">Paiement sécurisé SSL</p>
+            <LockClosedIcon className="w-5 h-5 text-yellow-500" />
+            <p className="ml-2 text-slate-700">Paiement sécurisé SSL</p>
           </div>
           <Image
             src="/icons/payment.svg"
             width={100}
             height={20}
             alt="Carte bancaire"
-            className="md:block hidden"
+            className="hidden md:block"
           />
         </div>
         <div className="">
