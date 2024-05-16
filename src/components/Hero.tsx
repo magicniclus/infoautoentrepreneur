@@ -70,6 +70,22 @@ const Hero = () => {
         formValues.prenom, // prenom
         formValues.email
       );
+      await fetch("/api/sendWelcomeEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: formValues.email,
+          motDePasse: formValues.nom,
+        }),
+      })
+        .then((response) => {
+          console.log("Email sent successfully:", response);
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+        });
       dispatch(
         setUserInfo({
           nom: formValues.nom,
