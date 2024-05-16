@@ -38,29 +38,29 @@ const NavBarLanding = ({ dossier = true }: { dossier?: boolean }) => {
           </div>
           {dossier && (
             <div className="flex flex-col items-center md:hidden">
-              <h2 className="font-semibold text-xs">Dossier nº</h2>
-              <h3 className="text-xs">
+              <h2 className="font-bold text-sm">Dossier nº</h2>
+              <h3 className="text-sm">
                 {userInfo.dossierId?.toLocaleUpperCase()}
               </h3>
             </div>
           )}
           <div className="md:flex flex-col items-start hidden">
             <div className=" md:flex hidden items-center justify-center relative">
-              <PhoneIcon className="h-6 w-6 text-cyan-900 mr-3" />
+              <PhoneIcon className="h-6 w-6 text-slate-700 mr-3" />
               <div className="flex flex-col justify-between">
                 <a
                   href="tel:+33972164963"
-                  className="font-semibold text-xs md:text-sm text-cyan-900"
+                  className="font-semibold text-xs md:text-sm text-slate-700"
                 >
                   09 72 16 49 63
                 </a>
               </div>
             </div>
             <div className=" md:flex hidden items-center justify-center relative">
-              <EnvelopeIcon className="h-6 w-6 text-cyan-900 mr-3" />
+              <EnvelopeIcon className="h-6 w-6 text-slate-700 mr-3" />
               <a
                 href="mailto:contact@info-autoentrepreneur.fr"
-                className="font-semibold text-xs md:text-sm text-cyan-900"
+                className="font-semibold text-xs md:text-sm text-slate-700"
               >
                 contact@info-autoentrepreneur.fr
               </a>
