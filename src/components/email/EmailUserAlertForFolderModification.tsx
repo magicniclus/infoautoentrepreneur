@@ -86,7 +86,7 @@ export const EmailUserAlertForFolderModification: React.FC<
       {/* Signature Section */}
       <div style={styles.signature as React.CSSProperties}>
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/autoentrepreneur-info.appspot.com/o/logos%2FlogoWithName.png?alt=media&token=bb1bc49a-2e51-4386-83a1-9c415e0aa77c"
+          src="https://www.info-autoentrepreneur.fr/logoWithName.png"
           alt="Logo de l'Entreprise"
           style={styles.logo}
         />
