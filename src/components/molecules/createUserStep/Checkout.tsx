@@ -157,6 +157,7 @@ const Checkout = () => {
               <span className="font-bold">59,00 €</span>
             </h2>
             <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
+            <div className=""></div>
             <div
               className="mt-3 w-[90%] text-slate-400 mx-auto flex justify-between items-center cursor-pointer"
               onClick={(e) => setOpen((e) => !e)}
@@ -174,7 +175,7 @@ const Checkout = () => {
               />
             </div>
             {open && (
-              <div className="p-3 text-start w-[90%] mx-auto text-slate-400 text-sm">
+              <div className="p-3 text-start w-[90%] mx-auto text-slate-400 text-sm p-2 bg-white mt-3 rounded-md">
                 <h3 className="">
                   Nom, prénom du demandant :{" "}
                   <span className="font-semibold">
