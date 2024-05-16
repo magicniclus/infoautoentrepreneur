@@ -97,7 +97,7 @@ const page = () => {
               <p className="mt-3">
                 En l’absence de réception de l’email de confirmation, le Client
                 est invité à contacter l’Entreprise via l’adresse email
-                contact@info-autoentrepreneur.fr et à vérifier le dossier de
+                contact@info-autoentrepreneur.com et à vérifier le dossier de
                 courriers indésirables (« spam »).
               </p>
               <p className="mt-3">
@@ -108,8 +108,8 @@ const page = () => {
               </p>
               <p className="mt-3">
                 2.3 Pour résilier son inscription aux Services, le Client doit
-                envoyer un email à l’adresse contact@info-autoentrepreneur.fr ou
-                procéder à la désinscription directement depuis son espace
+                envoyer un email à l’adresse contact@info-autoentrepreneur.com
+                ou procéder à la désinscription directement depuis son espace
                 client. La résiliation sera effective le mois suivant la
                 demande, mettant fin aux services décrits à l’article 4. Un
                 email de confirmation de la désinscription sera envoyé au
