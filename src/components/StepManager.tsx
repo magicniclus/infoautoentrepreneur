@@ -139,7 +139,7 @@ const StepManager = () => {
   return (
     <section className="md:w-7/12 w-full">
       {step < 4 && (
-        <form className="px-6 lg:px-8 text-slate-700 flex flex-col">
+        <form className=" lg:px-8 text-slate-700 flex flex-col">
           {handleForm()}
           <button
             type="button"
