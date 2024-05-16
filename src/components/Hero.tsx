@@ -229,7 +229,7 @@ const Hero = () => {
                   id="cgu"
                   name="cgu"
                   onChange={handleChange}
-                  className="mr-2 cursor-pointer"
+                  className="mr-2 cursor-pointer h-5 w-5"
                 />
                 <label htmlFor="cgu" className="ml-2 text-xs text-slate-700">
                   J&apos;accepte les{" "}
