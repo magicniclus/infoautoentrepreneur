@@ -49,103 +49,108 @@ const Step = () => {
     return (
       <Accordion type="single" collapsible className="w-full text-slate-700">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="text-start text-sm">
+          <AccordionTrigger className="text-sm text-start">
             Pourquoi renseigner toutes ces informations ?
           </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
+          <AccordionContent className="text-sm text-start">
             Pour être en conformité avec les règles administratives en vigueur.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger className="text-start text-sm">
+          <AccordionTrigger className="text-sm text-start">
             Puis-je modifier mes informations plus tard ?
           </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
+          <AccordionContent className="text-sm text-start">
             Vous pouvez modifier vos informations à n&apos;importe quel moment
             après votre inscription.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger className="text-start text-sm">
+          <AccordionTrigger className="text-sm text-start">
             Pourquoi ces démarches ?
           </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
+          <AccordionContent className="text-sm text-start">
             Pour vous assister au cours de votre demande d’immatriculation.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
     );
   };
+
   const faqTwo = () => {
     return (
       <Accordion type="single" collapsible className="w-full text-slate-700">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="text-start text-sm">
+          <AccordionTrigger className="text-sm text-start">
             Quelle date choisir pour le début de mon activité ?
           </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
+          <AccordionContent className="text-sm text-start">
             Votre auto-entreprise sera officiellement enregistrée à partir de la
             date de début d’activité que vous aurez indiquée. Il est possible de
             choisir une date dans les 6 mois précédant la date
-            d’aujourd&apos;hui, et dans les 30 jours suivants.
+            d&apos;aujourd&apos;hui, et dans les 30 jours suivants.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger className="text-start text-sm">
+          <AccordionTrigger className="text-sm text-start">
             Quel type d&apos;activité choisir ?
           </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
+          <AccordionContent className="text-sm text-start">
             Il est impératif de choisir l&apos;activité principale de votre
             auto-entreprise la plus adaptée à votre activité. Un code APE vous
             sera ensuite attribué selon l’activité choisie.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger className="text-start text-sm">
+          <AccordionTrigger className="text-sm text-start">
             Quel sera le nom de mon entreprise ?
           </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
+          <AccordionContent className="text-sm text-start">
             Le nom commercial de votre auto-entreprise est obligatoirement votre
             nom et prénom. Vous pouvez cependant décider de lui donner un nom de
             marque personnalisé afin de protéger votre auto-entreprise et de
             mieux la définir auprès de vos clients.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger className="text-start text-sm">
+        <AccordionItem value="item-4">
+          <AccordionTrigger className="text-sm text-start">
             Puis-je modifier mes informations plus tard ?
           </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
-            Pour vous assister au cours de votre demande d’immatriculation.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
-    );
-  };
-  const faqThree = () => {
-    return (
-      <Accordion type="single" collapsible className="w-full text-slate-700">
-        <AccordionItem value="item-1">
-          <AccordionTrigger className="text-start text-sm">
-            Quel adresse je dois renseigner ?
-          </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
-            L’adresse du domicile sera votre adresse pour toute correspondance :
-            il est indispensable de l’indiquer dans le formulaire d’inscription.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger className="text-start text-sm">
-            Puis-je modifier mes informations plus tard ?
-          </AccordionTrigger>
-          <AccordionContent className="text-start text-sm">
-            Vous pouvez modifier vos information à n&apos;importe quel moment
+          <AccordionContent className="text-sm text-start">
+            Vous pouvez modifier vos informations à n&apos;importe quel moment
             après votre inscription.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
     );
   };
+
+  const faqThree = () => {
+    return (
+      <Accordion type="single" collapsible className="w-full text-slate-700">
+        <AccordionItem value="item-1">
+          <AccordionTrigger className="text-sm text-start">
+            Quelle adresse je dois renseigner ?
+          </AccordionTrigger>
+          <AccordionContent className="text-sm text-start">
+            L&apos;adresse du domicile sera votre adresse pour toute
+            correspondance : il est indispensable de l’indiquer dans le
+            formulaire d’inscription.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-2">
+          <AccordionTrigger className="text-sm text-start">
+            Puis-je modifier mes informations plus tard ?
+          </AccordionTrigger>
+          <AccordionContent className="text-sm text-start">
+            Vous pouvez modifier vos informations à n&apos;importe quel moment
+            après votre inscription.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    );
+  };
+
   const faqFour = () => {
     return (
       <></>
@@ -155,10 +160,10 @@ const Step = () => {
       //   className="w-full mt-10 text-slate-700"
       // >
       //   <AccordionItem value="item-1">
-      //     <AccordionTrigger className="text-start text-sm">
+      //     <AccordionTrigger className="text-sm text-start">
       //       Pourquoi renseigner toutes ces informations ?
       //     </AccordionTrigger>
-      //     <AccordionContent className="text-start text-sm">
+      //     <AccordionContent className="text-sm text-start">
       //       Pour être en conformité avec les règles administratives en vigueur.
       //     </AccordionContent>
       //   </AccordionItem>
@@ -167,14 +172,14 @@ const Step = () => {
   };
 
   return (
-    <section className="w-full text-slate-700 md:mt-0 mt-10">
-      <div className="w-full bg-blue-50 h-max rounded-t-md py-3 md:block hidden">
-        <div className="px-6 lg:px-8 flex flex-col justify-center items-center">
-          <h2 className="font-bold text-sm">Numero de dossier</h2>
+    <section className="w-full mt-10 text-slate-700 md:mt-0">
+      <div className="hidden w-full py-3 bg-blue-50 h-max rounded-t-md md:block">
+        <div className="flex flex-col items-center justify-center px-6 lg:px-8">
+          <h2 className="text-sm font-bold">Numero de dossier</h2>
           <h3 className="text-sm">{userInfo.dossierId.toLocaleUpperCase()}</h3>
         </div>
       </div>
-      <div className="px-6 lg:px-8  md:flex hidden flex-col justify-center items-start w-full flex flex-col mt-7 relative">
+      <div className="relative flex flex-col items-start justify-center hidden w-full px-6 lg:px-8 md:flex mt-7">
         <div
           className={`${
             step === 1
@@ -198,7 +203,7 @@ const Step = () => {
               step > 1 && "border-green-700"
             }`}
           >
-            {step > 1 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
+            {step > 1 ? <CheckIcon className="w-5 h-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Déclarant</p>
         </div>
@@ -216,7 +221,7 @@ const Step = () => {
               step > 2 && "border-green-700"
             }`}
           >
-            {step > 2 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
+            {step > 2 ? <CheckIcon className="w-5 h-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Activité</p>
         </div>
@@ -234,7 +239,7 @@ const Step = () => {
               step > 3 && "border-green-700"
             }`}
           >
-            {step > 3 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
+            {step > 3 ? <CheckIcon className="w-5 h-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Adresse</p>
         </div>
@@ -252,30 +257,30 @@ const Step = () => {
               step > 4 && "border-green-700"
             }`}
           >
-            {step > 4 ? <CheckIcon className="h-5 w-5 text-green-700" /> : null}
+            {step > 4 ? <CheckIcon className="w-5 h-5 text-green-700" /> : null}
           </div>
           <p className="ml-3 text-sm">Finalisation</p>
         </div>
       </div>
-      <div className="w-full bg-blue-50 h-max px-6 lg:px-8 rounded-t-md py-5 mt-10 flex justify-center">
+      <div className="flex justify-center w-full px-6 py-5 mt-10 bg-blue-50 h-max lg:px-8 rounded-t-md">
         <h2 className="text-sm font-bold">Assistance</h2>
       </div>
-      <div className="w-full h-max px-6 lg:px-8 md:rounded-md rounded-b-md py-5 md:bg-white bg-slate-50">
-        <div className="flex relative lign items-center">
-          <PhoneIcon className="h-4 w-4 mr-4" />
+      <div className="w-full px-6 py-5 h-max lg:px-8 md:rounded-md rounded-b-md md:bg-white bg-slate-50">
+        <div className="relative flex items-center lign">
+          <PhoneIcon className="w-4 h-4 mr-4" />
           <div className="flex flex-col justify-between">
-            <a href="tel:0917164963" className="font-semibold text-sm">
+            <a href="tel:0917164963" className="text-sm font-semibold">
               09 72 16 49 63{" "}
             </a>
             <p className="text-xs">Du lundi au vendredi - de 9h à 19h</p>
           </div>
         </div>
-        <div className="flex relative lign mt-5 items-center">
-          <EnvelopeIcon className="h-4 w-4 mr-4" />
+        <div className="relative flex items-center mt-5 lign">
+          <EnvelopeIcon className="w-4 h-4 mr-4" />
           <div className="flex flex-col justify-between">
             <a
               href="mailTo:contact@mon-independant.fr"
-              className="font-semibold text-sm "
+              className="text-sm font-semibold "
             >
               contact@mon-independant.fr
             </a>
@@ -288,15 +293,15 @@ const Step = () => {
           step === 4 ? "hidden" : "flex"
         }`}
       >
-        <div className="px-6 lg:px-8 flex flex-col">
+        <div className="flex flex-col px-6 lg:px-8">
           <h2 className="text-sm font-bold">Vos questions</h2>
         </div>
       </div>
       <div className="px-6 lg:px-8">{faqMananger()}</div>
-      <div className="w-full h-max rounded-md py-3 mt-10">
-        <div className="px-6 lg:px-8 flex flex-col">
+      <div className="w-full py-3 mt-10 rounded-md h-max">
+        <div className="flex flex-col px-6 lg:px-8">
           <h2 className="text-sm">
-            <span className="text-slate-700 text-md font-semibold">
+            <span className="font-semibold text-slate-700 text-md">
               +1 051 000 <br />
             </span>{" "}
             auto-entreprises créées en 2023
