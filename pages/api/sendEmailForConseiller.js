@@ -21,8 +21,8 @@ export default async (req, res) => {
     );
 
     const msg = {
-      to: ["casteranicolas.contact@gmail.com"], // Assurez-vous que cette adresse est valide
-      from: "contact@info-autoentrepreneur.fr",
+      to: "contact@info-autoentrepreneur.com", // Assurez-vous que cette adresse est valide
+      from: "contact@info-autoentrepreneur.com",
       subject:
         "Message conseiller de la part de Mr/Mme " +
         nom +
