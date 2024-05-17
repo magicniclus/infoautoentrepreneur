@@ -4,29 +4,24 @@
 
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { ajouterUtilisateurDansDossier } from "../firebase/database/database";
 import { initializeCompte, setUserInfo } from "../redux/createUserSlice";
 
 const Hero = () => {
   const dispatch = useDispatch();
-
   const [buttonLoader, setButtonLoader] = useState(false);
-
   const [formValues, setFormValues] = useState({
     nom: "",
     prenom: "",
     email: "",
     cgu: false,
   });
-
   const [disabled, setDisabled] = useState(true);
-
   const route = useRouter();
 
   const nameRegex = /^[A-Za-zÀ-ÿ\s]{2,}$/;
-
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   useEffect(() => {
@@ -36,81 +31,82 @@ const Hero = () => {
       emailRegex.test(formValues.email) &&
       formValues.cgu;
     setDisabled(!isFormValid);
-  }, [formValues, nameRegex, emailRegex]);
+  }, [formValues]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, type } = e.target;
     const value = type === "checkbox" ? e.target.checked : e.target.value;
     setFormValues((prev) => ({ ...prev, [name]: value }));
-  };
+  }, []);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      dispatch(initializeCompte());
+      const dossierId = Math.random().toString(36).substr(2, 8);
 
-    dispatch(initializeCompte());
+      if (
+        !nameRegex.test(formValues.nom) ||
+        !nameRegex.test(formValues.prenom) ||
+        !emailRegex.test(formValues.email)
+      ) {
+        alert("Veuillez vérifier les informations saisies.");
+        return;
+      }
 
-    const dossierId = Math.random().toString(36).substr(2, 8);
+      try {
+        setButtonLoader(true);
 
-    if (
-      !nameRegex.test(formValues.nom) ||
-      !nameRegex.test(formValues.prenom) ||
-      !emailRegex.test(formValues.email)
-    ) {
-      alert("Veuillez vérifier les informations saisies.");
-      return;
-    }
+        // Exécuter les tâches asynchrones de manière concurrente
+        await Promise.all([
+          ajouterUtilisateurDansDossier(
+            "brouillonInscription",
+            dossierId,
+            formValues.nom,
+            formValues.prenom,
+            formValues.email
+          ),
+          fetch("/api/sendWelcomeEmail", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: formValues.email,
+              motDePasse: formValues.nom,
+            }),
+          }),
+        ]);
 
-    try {
-      setButtonLoader(true);
-      // Utilisation de la fonction d'ajout
-      await ajouterUtilisateurDansDossier(
-        "brouillonInscription",
-        dossierId, // dossierId
-        formValues.nom, // nom
-        formValues.prenom, // prenom
-        formValues.email
-      );
-      await fetch("/api/sendWelcomeEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: formValues.email,
-          motDePasse: formValues.nom,
-        }),
-      })
-        .then((response) => {
-          console.log("Email sent successfully:", response);
-        })
-        .catch((error) => {
-          console.error("Error sending email:", error);
-        });
-      dispatch(
-        setUserInfo({
-          nom: formValues.nom,
-          prenom: formValues.prenom,
-          email: formValues.email,
-          dossierId,
-          telephone: "",
-          sexe: "",
-          dateDeNaissance: "",
-          nationnalite: "",
-          departement: "",
-          paysDeNaissance: "",
-          paysDeNaissanceEtranger: "",
-          villeDeNaissance: "",
-        })
-      );
-      route.push("/devenir-auto-entrepreneur/declaration");
-    } catch (error) {
-      console.error("Erreur lors de l'ajout du brouillon utilisateur :", error);
-    } finally {
-      setButtonLoader(false);
-    }
+        dispatch(
+          setUserInfo({
+            nom: formValues.nom,
+            prenom: formValues.prenom,
+            email: formValues.email,
+            dossierId,
+            telephone: "",
+            sexe: "",
+            dateDeNaissance: "",
+            nationnalite: "",
+            departement: "",
+            paysDeNaissance: "",
+            paysDeNaissanceEtranger: "",
+            villeDeNaissance: "",
+          })
+        );
 
-    // Dispatch l'action pour stocker les informations de l'utilisateur
-  };
+        route.push("/devenir-auto-entrepreneur/declaration");
+      } catch (error) {
+        console.error(
+          "Erreur lors de l'ajout du brouillon utilisateur :",
+          error
+        );
+      } finally {
+        setButtonLoader(false);
+      }
+    },
+    [dispatch, formValues, route]
+  );
 
   return (
     <>
@@ -140,15 +136,21 @@ const Hero = () => {
         className="w-full bg-[url('/background/papier.png')] md:bg-[url('/background/men.jpeg')] py-10 md:py-32 bg-no-repeat bg-cover md:bg-center bg-top relative background text-slate-700"
       >
         <div className="z-10 flex flex-col max-w-6xl px-6 mx-auto lg:px-8 md:flex-row content">
-          <div className="relative z-20 w-full md:w-1/2">
+          <div className="relative z-20 w-full md:w-7/12">
             <img
               src="/logo.png"
               alt="hero"
-              className="absolute z-10 w-32 h-auto md:w-48 -top-3 -left-3 md:-top-5 md:-left-5 opacity-60"
+              className="absolute z-10 w-32 h-auto md:w-44 -top-3 -left-3 md:-top-5 md:-left-5 opacity-60"
             />
-            <h1 className="relative z-20 text-4xl font-bold text-white sm:text-6xl">
-              Créez votre <br /> auto-entreprise <br /> en quelques clics
+            <h1 className="relative z-20 text-4xl font-bold text-white sm:text-5xl">
+              Creez votre
+              <br /> <span className="sm:text-[55px]">auto-entreprise</span>
+              <br />
+              en 3 minutes
             </h1>
+            <h2 className="z-20 text-4xl font-semibold text-white text-xl mt-5">
+              Un processus simple et rapide pour devenir auto-entrepreneur
+            </h2>
             <ul className="relative z-20 mt-8 text-white">
               <li className="flex items-center mt-3 text-normal">
                 <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/10">
@@ -175,17 +177,6 @@ const Hero = () => {
               className="md:w-[80%] w-full py-8 bg-white md:bg-white/85 rounded-md px-5 md:px-8 flex-col items-center md:mt-0 mt-7 relative"
               onSubmit={handleSubmit}
             >
-              {/* {buttonLoader && (
-                <div className="absolute top-0 right-0 flex items-center justify-center w-full h-full bg-white/50">
-                  <div className=" animate-pulse">
-                    <img
-                      src="/logo.png"
-                      alt="loader"
-                      className="w-10 h-10 opacity-60"
-                    />
-                  </div>
-                </div>
-              )} */}
               <h2 className="w-9/12 mx-auto font-semibold text-center">
                 FORMULAIRE DE DÉCLARATION EN LIGNE SIMPLIFIÉ
               </h2>
