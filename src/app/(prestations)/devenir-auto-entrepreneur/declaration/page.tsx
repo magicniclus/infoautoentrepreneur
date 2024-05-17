@@ -38,6 +38,12 @@ const page = () => {
               et notre politique de confidentialité, vous avez le droit de
               consulter, modifier et supprimer vos données personnelles.
             </p>
+            <a
+              href="https://www.info-autoentrepreneur.fr/cgv"
+              className="text-[10px] text-slate-400 hover:underline mt-1"
+            >
+              *Conditions de remboursement
+            </a>
           </div>
         </div>
       </main>
