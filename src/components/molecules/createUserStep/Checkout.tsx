@@ -157,7 +157,7 @@ const Checkout = () => {
         ) : (
           <>
             <div className="w-full md:px-0">
-              <div className="mb-7 text-center bg-[url('/background/paper3.png')] bg-top text-slate-700 rounded-md py-4 px-2">
+              <div className="mb-7 text-center bg-[url('/background/paper3.png')] bg-top text-slate-700 rounded-md py-4 px-4">
                 <div className="flex items-center text-xs w-[90%] mx-auto mb-7">
                   <CheckCircle className="w-4 h-4 mr-2 text-cyan-900" />
                   <h3 className="text-start">
@@ -167,11 +167,20 @@ const Checkout = () => {
                     </span>
                   </h3>
                 </div>
-                <h2 className="">
+                <div className="text-green-700 rounded-md p-4">
                   Paiement des frais à l’inscription au régime
                   d’auto-entrepreneur :{" "}
-                  <span className="font-bold text-slate-700">49,00 €</span>
-                </h2>
+                  <span className="font-bold text-xl">69,00 €</span>
+                  <p className="text-sm text-slate-700 mt-2">
+                    Frais remboursés en cas de refus de l&apos;administration{" "}
+                    <a
+                      href="https://www.info-autoentrepreneur.fr/cgv"
+                      className="text-[10px] text-slate-400 hover:underline mt-1"
+                    >
+                      (Voir conditions).
+                    </a>
+                  </p>
+                </div>
                 <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
                 <div className=""></div>
                 <div
