@@ -100,7 +100,7 @@ const CheckoutCessation = () => {
           <h2 className="">
             {" "}
             Paiement des frais de cessation d&apos;activité :{" "}
-            <span className="font-bold">49,00 €</span>
+            <span className="font-bold">69,00€</span>
           </h2>
           <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
           <div
