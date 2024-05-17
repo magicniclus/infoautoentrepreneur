@@ -148,7 +148,7 @@ const faqsData: Faq[] = [
       </>
     ),
     answer:
-      "Le coût pour l'assistance à la création d'une micro-entreprise par le Portail Auto-Entrepreneur est de 49 €, incluant la vérification du dossier et un accompagnement personnalisé.",
+      "Le coût pour l'assistance à la création d'une micro-entreprise par le Portail Auto-Entrepreneur est de 69€, incluant la vérification du dossier et un accompagnement personnalisé.",
   },
   {
     id: 14,
