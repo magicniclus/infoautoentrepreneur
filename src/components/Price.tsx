@@ -5,7 +5,7 @@ const tiers = [
     name: "Inscription au régime",
     id: "tier-freelancer",
     href: "/devenir-auto-entrepreneur",
-    price: "49€",
+    price: "69€",
     description: "The essentials to provide your best work for clients.",
     bg: "cyan-900/5",
     features: [
@@ -21,7 +21,7 @@ const tiers = [
     name: "Modification de situation",
     id: "tier-startup",
     href: "/modification",
-    price: "49€",
+    price: "69€",
     description: "A plan that scales with your rapidly growing business.",
     bg: "blue-700/5",
     features: [
@@ -37,7 +37,7 @@ const tiers = [
     name: "Cessation d'activité",
     id: "tier-enterprise",
     href: "/cessation",
-    price: "49€",
+    price: "69€",
     description: "Dedicated support and infrastructure for your company.",
     bg: "red-700/5",
     features: [
