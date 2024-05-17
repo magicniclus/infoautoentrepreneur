@@ -83,9 +83,9 @@ export const EmailUserFactureTemplate: React.FC<EmailTemplateProps> = ({
       <p style={styles.paragraph}>
         Prestation: Traiment d&apos;une création d&apos;autoentreprise
       </p>
-      <p style={styles.paragraph}>Total HT : 49,00€</p>
+      <p style={styles.paragraph}>Total HT : 69,00€</p>
       <p style={styles.paragraph}>Total TVA : 0,00€</p>
-      <p style={styles.paragraph}>Total TTC : 49,00€</p>
+      <p style={styles.paragraph}>Total TTC : 69,00€</p>
       <p style={styles.paragraph}>Méthode paiement : Carte bancaire</p>
       <p style={styles.paragraph}>
         Identité souscripteur : {nom} {prenom}
