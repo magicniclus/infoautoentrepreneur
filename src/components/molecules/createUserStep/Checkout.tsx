@@ -172,13 +172,7 @@ const Checkout = () => {
                   d’auto-entrepreneur :{" "}
                   <span className="font-bold text-xl">69,00 €</span>
                   <p className="text-sm text-slate-700 mt-2">
-                    Frais remboursés en cas de refus de l&apos;administration{" "}
-                    <a
-                      href="https://www.info-autoentrepreneur.fr/cgv"
-                      className="text-[10px] text-slate-400 hover:underline mt-1"
-                    >
-                      (Voir conditions).
-                    </a>
+                    Frais remboursés en cas de refus de l&apos;administration.*
                   </p>
                 </div>
                 <div className="w-[90%] h-[1px] bg-slate-300 mx-auto mt-3"></div>
