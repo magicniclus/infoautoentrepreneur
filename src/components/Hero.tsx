@@ -28,8 +28,7 @@ const Hero = () => {
     const isFormValid =
       nameRegex.test(formValues.nom) &&
       nameRegex.test(formValues.prenom) &&
-      emailRegex.test(formValues.email) &&
-      formValues.cgu;
+      emailRegex.test(formValues.email);
     setDisabled(!isFormValid);
   }, [formValues]);
 
@@ -230,7 +229,7 @@ const Hero = () => {
                   className="w-full px-2 py-1 mt-2 border rounded-md border-slate-400"
                 />
               </div>
-              <div className="flex w-full mt-3">
+              {/* <div className="flex w-full mt-3">
                 <input
                   type="checkbox"
                   id="cgu"
@@ -243,13 +242,13 @@ const Hero = () => {
                   <a href="#">conditions générales de vente</a> ainsi que la{" "}
                   <a href="#">politique de confidentialité</a>.
                 </label>
-              </div>
+              </div> */}
               <button
                 disabled={disabled}
                 type="submit"
                 className={`${
                   disabled ? "bg-green-700/70" : "bg-green-700"
-                }  text-white w-full py-2 rounded-md mt-5 hover:bg-green-700/70 transition duration-150 easeInOut`}
+                }  text-white w-full py-2 rounded-md mt-10 hover:bg-green-700/70 transition duration-150 easeInOut`}
               >
                 DÉMARREZ VOTRE ENTREPRISE
               </button>
