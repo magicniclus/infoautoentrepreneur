@@ -54,7 +54,7 @@ const faqsCessationAutoEntreprise = [
       </>
     ),
     answer:
-      "Chez Info-Autoentrepreneur, la déclaration de cessation d’activité coûte 49 €, incluant la gestion du dossier et l'accompagnement personnalisé.",
+      "Chez Info-Autoentrepreneur, la déclaration de cessation d’activité coûte 69€, incluant la gestion du dossier et l'accompagnement personnalisé.",
   },
   {
     id: 5,
