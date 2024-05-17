@@ -146,6 +146,19 @@ const page = () => {
                 SSL, garantissant une protection optimale des données bancaires
                 du Client.
               </p>
+              <p className="mt-3">
+                3.3 Conditions de Remboursement des Frais d&apos;Inscription{" "}
+                <br />
+                Les frais d&apos;inscription de 69€ au régime
+                d&apos;auto-entrepreneur vous seront intégralement remboursés si
+                les conditions suivantes sont respectées : <br />
+                -Le client n&apos;est pas d&apos;origine étrangère à la France.
+                <br />
+                -Le client ne possède pas déjà une entreprise ou
+                auto-entreprise.
+                <br />
+                -Toute autre condition jugée pertinente par l&apos;entreprise.
+              </p>
               <h3 className="text-lg font-semibold mt-7">
                 4. Accès aux Services
               </h3>
@@ -387,12 +400,12 @@ const page = () => {
               </p>
               <p className="mt-3">
                 Tout litige relatif à leur interprétation, exécution ou rupture
-                sera, à défaut d&pos;accord amiable, soumis aux tribunaux
+                sera, à défaut d&apos;accord amiable, soumis aux tribunaux
                 compétents du ressort de Bordeaux, lieu du siège social de
-                l&pos;entreprise Nicolas Catera. Cette attribution de
+                l&apos;entreprise Nicolas Catera. Cette attribution de
                 juridiction vaut quel que soit le lieu de souscription,
-                d&pos;exécution ou de résolution du contrat et nonobstant la
-                pluralité des défendeurs ou l&pos;appel en garantie.
+                d&apos;exécution ou de résolution du contrat et nonobstant la
+                pluralité des défendeurs ou l&apos;appel en garantie.
               </p>
             </div>
           </div>
