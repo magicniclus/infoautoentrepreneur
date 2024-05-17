@@ -149,13 +149,19 @@ const page = () => {
               <p className="mt-3">
                 3.3 Conditions de Remboursement des Frais d&apos;Inscription{" "}
                 <br />
-                Les frais d&apos;inscription de 69€ au régime
-                d&apos;auto-entrepreneur vous seront intégralement remboursés si
-                les conditions suivantes sont respectées : <br />
+                En cas de refus de l&apos;administration à la création
+                d&apos;auto-entreprise pour le client, les frais
+                d&apos;inscription de 69€ au régime d&apos;auto-entrepreneur lui
+                seront intégralement remboursés si les conditions suivantes sont
+                respectées : <br />
                 -Le client n&apos;est pas d&apos;origine étrangère à la France.
                 <br />
                 -Le client ne possède pas déjà une entreprise ou
                 auto-entreprise.
+                <br />
+                -Le client ne possède pas de casié judicière.
+                <br />
+                -Le client habite sur le téritoire Français.
                 <br />
                 -Toute autre condition jugée pertinente par l&apos;entreprise.
               </p>
