@@ -63,7 +63,7 @@ const faqsModificationAutoEntreprise = [
       </>
     ),
     answer:
-      "Effectuer une déclaration de changement d'adresse pour votre auto-entreprise via Info Auto-entreprise est facturé 49 €. Ce tarif inclut la gestion complète de votre dossier, depuis sa création jusqu'à sa transmission, en passant par sa validation, ainsi que le soutien d'un conseiller spécialisé.",
+      "Effectuer une déclaration de changement d'adresse pour votre auto-entreprise via Info Auto-entreprise est facturé 69€. Ce tarif inclut la gestion complète de votre dossier, depuis sa création jusqu'à sa transmission, en passant par sa validation, ainsi que le soutien d'un conseiller spécialisé.",
   },
   {
     id: 3,
