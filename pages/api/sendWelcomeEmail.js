@@ -17,8 +17,7 @@ export default async (req, res) => {
     const msg = {
       to: [email], // Assurez-vous que cette adresse est valide
       from: "contact@info-autoentrepreneur.com",
-      subject:
-        "Vous y êtes presque, devenez auto-entrepreneur en quelques clics!",
+      subject: "Bienvenue chez Info Auto-Entrepreneur !",
       html: emailContent,
     };
 
