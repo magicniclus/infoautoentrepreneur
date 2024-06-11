@@ -8,7 +8,7 @@ type CTAProps = {
 };
 
 const CTA: FC<CTAProps> = ({
-  titre = "Devenez Auto-Entrepreneur",
+  titre = "Démarrez votre auto-entrepriseen ligne",
   paragraphe = "Inscrivez-vous comme des milliers de personnes chaque année au régime de l'auto-entrepreneur et lancez votre activité en toute simplicité.",
   texteBouton = "JE M'INSCRIS",
   lienBouton = "#form",
