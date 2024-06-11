@@ -1,4 +1,3 @@
-import Avis from "@/components/Avis";
 import CTA from "@/components/CTA";
 import EtapesCessation from "@/components/EtapesCessation";
 import Faq from "@/components/Faq";
@@ -139,7 +138,7 @@ const page = () => {
       <NavBar />
       <main>
         <HeroCession />
-        <Notes />
+        {/* <Notes /> */}
         <EtapesCessation />
         <Faq faqs={faqsCessationAutoEntreprise} />
         <CTA
@@ -147,7 +146,7 @@ const page = () => {
           texteBouton="Fermer"
           paragraphe="Fermez votre auto-entreprise en toute simplicité."
         />
-        <Avis />
+        {/* <Avis /> */}
       </main>
       <BigFooter />
     </>
