@@ -142,29 +142,29 @@ const Hero = () => {
               className="absolute z-10 w-32 h-auto md:w-44 -top-3 -left-3 md:-top-5 md:-left-5 opacity-60"
             />
             <h1 className="relative z-20 text-4xl font-bold text-white sm:text-5xl">
-              Creez votre
+              Commencez votre
               <br /> <span className="sm:text-[55px]">auto-entreprise</span>
               <br />
-              en 3 minutes
+              en ligne
             </h1>
-            <h2 className="z-20 text-4xl font-semibold text-white text-xl mt-5">
+            {/* <h2 className="z-20 text-4xl font-semibold text-white text-xl mt-5">
               Un processus simple et rapide pour devenir auto-entrepreneur
-            </h2>
+            </h2> */}
             <ul className="relative z-20 mt-8 text-white">
               <li className="flex items-center mt-3 text-normal">
-                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/10">
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/70">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Déclaration simplifiée au statut d&apos;auto-entrepreneur 2024
               </li>
               <li className="flex items-center mt-3 text-normal">
-                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/10">
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/70">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Déclaration simple et rapide
               </li>
               <li className="flex items-center mt-3 text-normal">
-                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/10">
+                <div className="flex justify-center items-center h-[23px] w-[23px] mr-3 rounded-full bg-white/70">
                   <CheckCircleIcon className="min-w-[12px] h-7 w-7 text-cyan-700" />
                 </div>
                 Dossier traité sous 24h
