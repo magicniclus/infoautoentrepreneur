@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import NavBar from "@/components/TailwindUi/NavBar";
 import BigFooter from "@/components/footer/BigFooter";
-import { avis } from "@/utils/avis";
-import { StarIcon } from "@heroicons/react/20/solid";
 
 const reviews = {
   average: 5,
@@ -38,7 +36,7 @@ const page = () => {
     <>
       <NavBar />
       <main className="">
-        <div className="w-full h-0.5 bg-slate-100"></div>{" "}
+        {/* <div className="w-full h-0.5 bg-slate-100"></div>{" "}
         <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 lg:grid lg:max-w-6xl lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="lg:col-span-4">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">
@@ -201,7 +199,7 @@ const page = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
       <BigFooter />
     </>
