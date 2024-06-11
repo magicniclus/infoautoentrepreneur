@@ -5,14 +5,14 @@ const Atouts = () => {
       <div className="px-6 mx-auto max-w-6xl lg:px-8">
         <div className="flex flex-col">
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Pourquoi choisir <span className="">Info Auto-Entrepreneur</span>
-            pour votre Auto-Entreprise?
+            Pourquoi choisir <span className="">Info Auto-Entrepreneur</span>{" "}
+            pour votre Auto-Entreprise ?
           </p>
           <p className="my-6 text-lg leading-8 text-white">
             Avec Info Auto-Entrepreneur, lancer votre auto-entreprise en ligne
-            devient un jeu d&apos;enfant. Rejoignez le régime de la
-            micro-entreprise en tout juste 3 minutes et embarquez dans
-            l&apos;aventure de l&apos;auto-entrepreneuriat sans attendre.
+            devient simple et rapide. Rejoignez le régime de la micro-entreprise
+            en seulement 3 minutes et commencez votre aventure entrepreneuriale
+            sans délai.
           </p>
         </div>
         <div className="grid items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -20,24 +20,28 @@ const Atouts = () => {
             <div className="lg:max-w-md">
               <ul className="my-6 text-lg leading-8 text-white list-inside">
                 <li className="mt-2">
-                  <span className="font-bold">1-Inscription rapide :</span> En
-                  seulement 3 minutes, vous pouvez compléter votre inscription
-                  et commencer votre activité.
+                  <span className="font-bold">1-Inscription rapide :</span>{" "}
+                  Finalisez votre inscription en 3 minutes seulement et lancez
+                  votre activité immédiatement.
                 </li>
                 <li className="mt-2">
-                  <span className="font-bold">2-Simplicité :</span> Nous vous
-                  guidons à chaque étape, rendant le processus facile et sans
-                  tracas.
+                  <span className="font-bold">
+                    2-Simplicité et Efficacité :
+                  </span>{" "}
+                  Nous vous accompagnons à chaque étape pour rendre le processus
+                  clair et sans complications.
                 </li>
                 <li className="mt-2">
-                  <span className="font-bold">3-Assistance dédiée :</span> Notre
-                  équipe est là pour répondre à toutes vos questions et vous
-                  aider en cas de besoin.
+                  <span className="font-bold">
+                    3-Assistance Personnalisée :
+                  </span>{" "}
+                  Notre équipe est disponible pour répondre à vos questions et
+                  vous soutenir à tout moment.
                 </li>
                 <li className="mt-2">
-                  <span className="font-bold">4-Accès aux ressources :</span>{" "}
-                  Profitez d&apos;un accès à une vaste gamme de ressources et de
-                  guides pour vous aider à réussir.
+                  <span className="font-bold">4-Ressources Complètes :</span>{" "}
+                  Accédez à une multitude de ressources et de guides conçus pour
+                  vous aider à réussir.
                 </li>
               </ul>
               <a
