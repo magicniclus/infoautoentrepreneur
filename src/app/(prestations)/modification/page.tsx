@@ -1,11 +1,9 @@
 import AtoutsModification from "@/components/AtoutsModification";
-import Avis from "@/components/Avis";
 import CTA from "@/components/CTA";
 import EtapesModification from "@/components/EtapesModification";
 import Faq from "@/components/Faq";
 import BigFooter from "@/components/footer/BigFooter";
 import Hero from "@/components/hero/HeroModification";
-import Notes from "@/components/Notes";
 import Pourquoi from "@/components/Pourquoi";
 import NavBar from "@/components/TailwindUi/NavBar";
 
@@ -138,7 +136,7 @@ const page = () => {
       <NavBar />
       <main>
         <Hero />
-        <Notes />
+        {/* <Notes /> */}
         <EtapesModification />
         <AtoutsModification />
         <Pourquoi
@@ -154,7 +152,7 @@ const page = () => {
           texteBouton="Modifier"
           paragraphe="Mettez à jour les informations de votre auto-entreprise en toute simplicité."
         />
-        <Avis />
+        {/* <Avis /> */}
       </main>
       <BigFooter />
     </>
