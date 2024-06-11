@@ -14,14 +14,14 @@ const Etapes = ({ titre }: { titre?: string }) => {
     },
     {
       id: 2,
-      name: "Nous vérifions vos informations et nous nous occupons des démarches administratives pour vous.",
-      value: "2 - Validation",
+      name: "Nos formalistes vérifient et traitent votre dossier complet sous 24h pour une inscription simple et rapide",
+      value: "2 - Vérification",
       icon: "",
     },
     {
       id: 3,
-      name: "Recevez votre numéro SIRET et accédez à nos outils de gestion. Vous êtes prêt à démarrer !",
-      value: "3 - Lancement",
+      name: "Statistiques, création de devis et factures, support illimité inclus dans votre espace client.",
+      value: "3 - Gestion",
       icon: "",
     },
   ];
