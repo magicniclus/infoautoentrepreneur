@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { StarIcon } from "@heroicons/react/20/solid";
 const HeroAccueil = () => {
   return (
     <>
@@ -36,7 +37,7 @@ const HeroAccueil = () => {
           >
             Devenir Auto-Entrepreneur
           </a>
-          {/* <div className="px-4 mx-auto flex justify-center items-center flex-col mt-5">
+          <div className="px-4 mx-auto flex justify-center items-center flex-col mt-5">
             <img
               src="/icons/badge.png"
               alt="badge de note"
@@ -53,7 +54,7 @@ const HeroAccueil = () => {
               <StarIcon className="h-5 w-5 text-yellow-400 mr-2" />
               <StarIcon className="h-5 w-5 text-yellow-400" />
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </>
